@@ -70,10 +70,10 @@
 }
 
 /*adzbite_mod*/
-#owl-demo .item{
+#top-carousel .item{
   margin: 3px;
 }
-#owl-demo .item img{
+#top-carousel .item img{
   display: block;
   width: 100%;
   height: auto;

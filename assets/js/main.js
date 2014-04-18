@@ -1,9 +1,13 @@
 var $=jQuery.noConflict();
  
-// Use jQuery via $j(...)
+
 $(document).ready(function() {
  
-  $("#owl-demo").owlCarousel({
+// =================================================
+// ============= Top Carousel Script ===============
+// =================================================
+
+  $("#top-carousel").owlCarousel({
     items : 4,
     lazyLoad : true,
     navigation : false,
@@ -17,5 +21,5 @@ $(document).ready(function() {
     paginationSpeed : 800,
     rewindSpeed : 1000,
   }); 
- 
+   
 });

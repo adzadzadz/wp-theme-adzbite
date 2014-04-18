@@ -49,3 +49,18 @@ function light_bg_shortcode2($atts, $content = null)
 	return $output;
 }
  
+/** =========== Top Carousel Image ============*/
+
+add_shortcode('top_img','top_carousel_image');
+
+function top_carousel_image($atts, $content = null)
+{
+	extract(shortcode_atts(array('link' => '', 'alt' => ''),$atts));
+
+	$output = '';
+	$output .= '<div class="item"><img class="lazyOwl" data-src="';
+	$output .= $link;
+	$output .= '" alt="' . $alt . '"></div>';
+
+	return $output;
+}
