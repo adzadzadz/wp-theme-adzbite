@@ -1,0 +1,323 @@
+/*
+*
+* FONTS
+*
+*/
+
+@font-face {
+	font-family: 'Tauri';
+	src: url("../fonts/Tauri-Regular.ttf") /* TTF file for CSS3 browsers */
+}
+
+/*
+ *
+ * General
+ *
+ */
+html, body {
+	height: 100%;
+	font-family: 'Tauri', sans-serif;
+	background: #080808;
+	color: #A1AB97;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  text-rendering: auto;
+}
+.gray {
+	background: #0D0D0D;
+	padding: 0 0;
+}
+#page-content {
+	padding-top: 35px;
+	height: 100%;
+}
+ul.float-li-right li {
+	float: right;
+}
+ul.float-li-left li {
+	float: left;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+a:link, a:hover, a:visited {
+	color: #31FF28;
+}
+a:hover {
+	text-decoration: none;
+}
+.widget-title {
+	font-size: 1.3em;
+	color: #fff;
+}
+.title {
+	color: white;
+}
+
+/*
+ *
+ * HEADER
+ *
+ */
+
+header {
+	background: #171717;
+	position: fixed !important;
+	top 0;
+	z-index: 99;
+	height: 35px;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+header ul {
+	padding: 0;
+}
+header ul li {
+	list-style: none;
+	padding-top: 6px;
+}
+header ul li a:link {
+	padding: 10px 8px;
+}
+header ul li a:hover {
+	text-decoration: none;
+	background: #044500;
+	color: #fff;
+}
+nav.mini div {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.brand {
+	padding-top: 6px;
+	background: #080808;
+	font-size: 1.2em;
+	height: 35px;
+	color: #18FF00;
+	text-align: center;
+}
+.brand a:hover {
+	text-decoration: none;
+}
+
+/*
+ *
+ * Menus
+ *
+ */
+
+.menu {
+	margin: 0 !important;
+}
+
+/*
+*
+* ASIDE/SIDEBAR
+*
+*/
+
+.wp-sidebar-widgets {
+	height: 100%;
+	padding-left: 10px;
+}
+.wp-sidebar-widgets ul{
+	margin-bottom: 30px;
+}
+/* Left */
+aside.left .title {
+	padding-left: 10px;
+	color: #fff;
+}
+aside.left {
+	padding: 0 0;
+}
+aside.left .aside-left-menu{
+	margin-top: 60px;
+}
+aside.left .tagline {
+	padding: 10px 10px;
+	background: #171717;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	z-index: 99;
+}
+aside.left #menu-main {
+	padding: 0 0 20px 10px;
+}
+aside.left #menu-main li {
+	list-style: none;
+	border-bottom:1px #ADADAC solid;
+}
+aside.left #menu-main a{
+	padding-left: 20px;
+}
+aside.left #menu-main a:hover{
+	padding-left: 25px;
+	text-decoration: none;
+}
+
+/* RIGHT */
+
+aside.right {
+	/*border-left: 2px #fff solid;*/
+	padding: 0 0;
+	/*background: #0D0D0D;*/
+}
+aside.right ul#sidebar {
+	padding-left: 0px;
+}
+aside.right .widget-title {
+	margin-top: 20px;
+}
+
+
+/*
+*
+* TOP CONTENT - MINI FEATURED CAROUSEL AREA
+*
+*/
+
+.top-content {
+	background: #0D0D0D;
+	padding-left: 0;
+	padding-right: 0;
+	height: 230px; /*TEMP*/
+	border-bottom: 2px #fff solid;
+}
+
+/*
+*
+* CENTER CONTENT - SINGLE FEATURED CAROUSEL AREA
+*
+*/
+
+.center-content {
+	/*background: #0D0D0D;*/
+	padding-left: 0;
+	padding-right: 0; 
+}
+.home-content {
+	padding: 15px 25px;
+}
+
+/*
+*
+* FOOTER
+*
+*/
+
+footer {
+	background: black;
+	color: #fff;
+	padding-top: 5px;
+	text-align: center;
+}
+
+
+/*
+*
+* BLOG
+*
+*/
+
+.blog-contain {
+	margin-bottom: 70px;
+}
+.blog-contain .title a {
+	color: #fff;
+}
+.blog-info {
+	font-size: .8em;
+}
+.blog-info a {
+	color: #fff;
+	text-decoration: underline;
+}
+ol.commentlist{
+	padding: 20px 20px;
+	background: #30302F;
+}
+ol.commentlist .children {
+	margin-top: 10px;
+	padding: 20px 20px;
+	background: #1C1C1B;
+}
+.comment-body {
+	margin-bottom: 10px;
+}
+.comment-body p {
+	color: #fff;
+}
+.comment-meta {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: .8em;
+	margin-bottom: 5px;
+}
+.comment-meta a {
+	text-decoration: underline;
+}
+.reply {
+	margin-top: 20px;
+}
+.reply a {
+	background: green;
+	color: #fff;
+	padding: 5px 10px;
+}
+.reply a:hover {
+	color: #000;
+}
+
+/*
+*
+* Shortcodes
+*
+*/
+
+.light_bg {
+	background: #30302F;
+	padding: 25px 15px;
+}
+.light_bg2 {
+	background: #1C1C1B;
+	padding: 25px 15px;
+}
+
+@media screen and (max-width: 990px) {
+	aside.right {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		background: #171717;
+		position: fixed !important;
+		top 0;
+		z-index: 99;
+		height: 70px;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	.top-content {
+		margin-top: 35px;
+	}
+	aside.left {
+		display: none !important;
+	}
+}
+
+
+
