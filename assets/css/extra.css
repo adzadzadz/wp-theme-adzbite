@@ -30,6 +30,25 @@ h6 {
   font-weight: 400;
   text-rendering: auto;
 }
+.page_title {
+	padding-top: 12px;
+	text-align: center;
+	background: #080808;
+	height: 60px;
+	max-width: 150px;
+}
+.page_title_cat {
+	padding-top: 12px;
+	text-align: center;
+	background: #080808;
+	height: 60px;
+	max-width: 300px;
+}
+.page_title_bg {
+	margin: 10px 0;
+	background-color: rgba(127,127,127,0.2);
+	height: 60px;
+}
 .gray {
 	/*background: #0D0D0D;*/
 	padding: 0 0;
@@ -317,7 +336,6 @@ ol.commentlist .children {
 	text-align: center;
 }
 .lightbox img {
-	margin-top: 10px;
 	max-width: 90%;
 	max-height: 90%;
 	margin-right: auto;

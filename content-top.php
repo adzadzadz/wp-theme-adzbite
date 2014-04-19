@@ -16,14 +16,15 @@ $options = get_option('theme_options');
 		<?php for ($x=0; $x < (int)$options['carousel_img_count']; $x++) { ?>
 			<div class="item">
 				<div class="lb_thumb">
-					<img class="lazyOwl" data-src="<?= $options['top_carousel_' . $x]?>" alt="Lazy Owl Image">
+					<img class="lazyOwl" data-src="<?= $options['top_carousel_' . $x]?>" data-link="<?= $options['top_carousel_link_' . $x]?>" alt="Lazy Owl Image">
 					<div class="text"><img src="<?php echo get_template_directory_uri() . '/assets/imgs/magnify.png';?>" alt=""></span></div>
 				</div>
 			</div>
+			
 		<?php }?>
 		</div>
 	</div>
 </section>
 <div class="lightbox">
-	<img src="http://www.adzbite.com/wp-content/uploads/2014/04/IMG_0954-1024x682.jpg" alt="">
+	
 </div>

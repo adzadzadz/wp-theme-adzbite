@@ -28,9 +28,9 @@ $(document).ready(function() {
   }); 
    
 
-// =================================================
-// ===================== Lightbox ==================
-// =================================================
+// ===================================================
+// ===================== Lightbox ====================
+// ===================================================
   $('.lb_thumb').hover(function () {
       $(this).find('div.text').fadeIn('slow');
   });
@@ -38,9 +38,11 @@ $(document).ready(function() {
       $(this).find('div.text').fadeOut('slow');
   });
   $('.lb_thumb').click(function(e) {
+      var img_link = $(this).find('.lazyOwl').data('link');
+      
       if ($('.lightbox').length > 0) { // #lightbox exists
                      //place href as img src value
-          // $('.lb_img').html('<img src="' + lb_link + '" />');
+          $('.lightbox').html('<img src="' + img_link + '" />');
           //show lightbox window - you could use .show('fast') for a transition
           $('.lightbox').fadeIn('fast');
       }
@@ -80,3 +82,16 @@ $(document).ready(function() {
       interval: 6000
     })
   });
+
+
+/*===================================================================================
+  ==============================FACEBOOK SHARE PLUGIN================================
+  =================================================================================== */
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=758749107492947";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));

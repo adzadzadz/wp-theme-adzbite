@@ -25,12 +25,11 @@
 		</div>
 	<?php else: ?>
 		<?php the_content();?>
-
+		<div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-type="button_count"></div>
 		<?php comments_template();?>
 
 		
 	<?php endif ?>
 	</div>
 </div>
-
 <hr class="blog-info">

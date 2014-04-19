@@ -35,7 +35,7 @@ function light_bg_shortcode($atts, $content = null)
 
 /** =========== Light Background 2 ============*/
 
-add_shortcode('light_bg2','light_bg_shortcode2');
+add_shortcode('blockqoute','light_bg_shortcode2');
 
 function light_bg_shortcode2($atts, $content = null)
 {

@@ -17,6 +17,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+<div id="fb-root"></div>
 <header class="col-sm-12 col-xs-12">
 	<nav class="mini">
 		<div class="brand col-md-2 col-sm-3 col-xs-12">
