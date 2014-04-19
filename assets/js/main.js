@@ -14,12 +14,14 @@ $(document).ready(function() {
 
     //Autoplay
     autoPlay : true,
-    stopOnHover : true,
+    stopOnHover : false,
 
     //Basic Speeds
     slideSpeed : 200,
     paginationSpeed : 800,
     rewindSpeed : 1000,
+
+    transitionStyle : true,
   }); 
    
 });

@@ -16,9 +16,6 @@ $options = get_option('theme_options');
 		<?php for ($x=0; $x < (int)$options['carousel_img_count']; $x++) { ?>
 			<div class="item"><img class="lazyOwl" data-src="<?= $options['top_carousel_' . $x]?>" alt="Lazy Owl Image"></div>
 		<?php }?>
-		<?php for ($x=0; $x < (int)$options['carousel_img_count']; $x++) { ?>
-			<div class="item"><img class="lazyOwl" data-src="<?= $options['top_carousel_' . $x]?>" alt="Lazy Owl Image"></div>
-		<?php }?>
 		</div>
 	</div>
 </section>

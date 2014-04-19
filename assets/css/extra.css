@@ -210,6 +210,9 @@ aside.right .widget-title {
 .home-content {
 	padding: 15px 25px;
 }
+.carousel-inner {
+	max-height: 450px;
+}
 
 /*
 *
