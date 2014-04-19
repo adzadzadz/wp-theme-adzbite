@@ -13,8 +13,8 @@ Contact me for any questions. I will be very happy to assist.
 Instructions
 ============
 Top and Home Carousel Setup: ```
-1. Admin > Login ```
-2. Adzbite Theme Settings ```
-3. Select number of images to display. ```
-4. Add image links in the fields. ``` 
-5. For home carousel, Add caption just bellow the image link. ```
+- Admin > Login ```
+- Adzbite Theme Settings ```
+- Select number of images to display. ```
+- Add image links in the fields ``` 
+- For home carousel, Add caption just bellow the image link ```
