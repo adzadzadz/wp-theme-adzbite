@@ -28,6 +28,8 @@ $(document).ready(function() {
 
 
 
+
+
 /*===================================================================================
   ===============================FACEBOOK LIKE PLUGIN================================
   =================================================================================== */
@@ -39,3 +41,11 @@ $(document).ready(function() {
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=272663612872931";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
+// Carousel Auto-Cycle
+  $(document).ready(function() {
+    $('.mini-carousel').carousel({
+      interval: 6000
+    })
+  });

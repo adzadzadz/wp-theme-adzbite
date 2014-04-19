@@ -27,10 +27,15 @@
 		</div>
 		<div class="right-nav col-md-5 col-sm-4 col-xs-5">
 			<ul class="float-li-right">
-			<?php if (get_option('users_can_register')) : ?>
-					<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
-					<li><a href="<?php echo wp_login_url(); ?>" title="Login">Login</a></li>
-			<?php endif; ?>
+				<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
+				<li>
+					<?php if ( is_user_logged_in() ) { ?> 
+						<a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a> 
+					<?php }
+					else{ ?>
+						<a href="<?= wp_login_url(); ?>" title="Login">Login</a>
+					<?php } ?>
+				</li>
 			<?php wp_nav_menu( array('theme_location' => 'top_menu_right', 'items_wrap' => '%3$s', )); ?>
 			</ul>
 		</div>
