@@ -144,13 +144,28 @@ nav.mini div {
 * ASIDE/SIDEBAR
 *
 */
-
+.widget-title {
+	padding: 5px 10px;
+	background-color: #121212;
+}
 .wp-sidebar-widgets {
 	height: 100%;
-	padding-left: 10px;
+	padding-left: 0px;
 }
 .wp-sidebar-widgets ul{
 	margin-bottom: 30px;
+}
+#sidebar ul {
+	padding-left: 45px;
+}
+#sidebar ul li {
+	/*list-style: none;*/
+}
+#sidebar ul li a:hover {
+	padding-left: 5px;
+}
+.textwidget {
+	padding: 0 20px;
 }
 /* Left */
 aside.left .title {
@@ -190,7 +205,6 @@ aside.left #menu-main a:hover{
 }
 
 /* RIGHT */
-
 aside.right {
 	/*border-left: 2px #fff solid;*/
 	padding: 0 0;
@@ -254,15 +268,38 @@ footer {
 * BLOG
 *
 */
-
+.blog-page, .blog-page .title {
+	color: #3a3838;
+}
+.blog-page .title { 
+	color: #333333;
+	font-weight: bolder;
+}
+.blog-page #respond a {
+	color: #333333;
+	text-decoration: underline;
+}
+.blog-bg {
+	background-color: #fff;
+	/*color: #fff;*/
+	font-family: sans-serif;
+	font-weight: bold;
+}
 .blog-contain {
 	margin-bottom: 70px;
+}
+.blog-page .blog-contain .title a {
+	color: #333333;
 }
 .blog-contain .title a {
 	color: #fff;
 }
 .blog-info {
 	font-size: .8em;
+}
+.blog-page .blog-info a {
+	color: #333333;
+	text-decoration: underline;
 }
 .blog-info a {
 	color: #fff;
@@ -277,11 +314,11 @@ ol.commentlist .children {
 	padding: 20px 20px;
 	background: #1C1C1B;
 }
+.comment {
+	color: #fff;
+}
 .comment-body {
 	margin-bottom: 10px;
-}
-.comment-body p {
-	color: #fff;
 }
 .comment-meta {
 	margin-top: 10px;
@@ -296,12 +333,23 @@ ol.commentlist .children {
 	margin-top: 20px;
 }
 .reply a {
-	background: green;
-	color: #fff;
+	background: #111;
+	color: #aaa;
 	padding: 5px 10px;
 }
 .reply a:hover {
-	color: #000;
+	color: #fff;
+}
+
+
+/*
+*
+* Plugin
+*
+*/
+
+.post-social-plugin {
+	margin-bottom: 10px;
 }
 
 /*

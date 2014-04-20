@@ -49,28 +49,19 @@ function light_bg_shortcode2($atts, $content = null)
 	return $output;
 }
  
-/** =============== Carousel =================*/
+/** =============== Lightbox =================*/
 
-add_shortcode('carousel','mini_carousel');
+add_shortcode('lightbox','lightbox');
 
-function mini_carousel($atts, $content = null)
+function lightbox($atts, $content = null)
 {
+	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#'),$atts));
+
 	$output = '';
-	$output .= '<div id="mini-carousel" class="owl-mini-carousel">';
-	$output .= do_shortcode($content);
+	$output .= '<div class="lb_thumb">';
+	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '">';
 	$output .= '</div>';
 
 	return $output;
 }
 
-add_shortcode('carousel_img','carousel_img_wrap');
-
-function carousel_img_wrap($atts, $content = null)
-{
-	extract(shortcode_atts(array('img' => '', 'alt' => '', 'link' => '#', 'target' => '_blank'),$atts));
-
-	$output = '';
-	$output .= '<div class="item"><a href="' . $link . '" target="' . $target . '"><img class="lazyOwl" src="' . $img . '" alt="'. $alt . '"></a></div>';
-
-	return $output;
-}

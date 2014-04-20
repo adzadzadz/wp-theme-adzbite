@@ -28,15 +28,15 @@
 		</div>
 		<div class="right-nav col-md-5 col-sm-4 col-xs-5">
 			<ul class="float-li-right">
-				<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
-				<li>
+								
 					<?php if ( is_user_logged_in() ) { ?> 
-						<a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a> 
+					<li><a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 					<?php }
 					else{ ?>
-						<a href="<?= wp_login_url(); ?>" title="Login">Login</a>
+					<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
+					<li><a href="<?= wp_login_url(); ?>" title="Login">Login</a></li>
 					<?php } ?>
-				</li>
+				
 			<?php wp_nav_menu( array('theme_location' => 'top_menu_right', 'items_wrap' => '%3$s', )); ?>
 			</ul>
 		</div>

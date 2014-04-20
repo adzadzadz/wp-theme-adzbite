@@ -14,7 +14,7 @@
 		<?=  bloginfo( 'description' ); ?>
 	</div>
 	<div class="aside-left-menu">
-		<h3 class="title">Menu</h3>
+		<h3 class="widget-title">Menu</h3>
 		<?php 
 
 			wp_nav_menu( array(

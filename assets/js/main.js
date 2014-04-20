@@ -47,7 +47,7 @@ $(document).ready(function() {
       $(this).find('div.text').fadeOut('slow');
   });
   $('.lb_thumb').click(function(e) {
-      var img_link = $(this).find('.lazyOwl').data('link');
+      var img_link = $(this).find('img').data('link');
       
       if ($('.lightbox').length > 0) { // #lightbox exists
                      //place href as img src value
@@ -73,7 +73,7 @@ $(document).ready(function() {
 
 
 /*===================================================================================
-  ===============================FACEBOOK LIKE PLUGIN================================
+  =============================FACEBOOK LIKE PAGE PLUGIN=============================
   =================================================================================== */
 
 (function(d, s, id) {
@@ -85,18 +85,22 @@ $(document).ready(function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
-// Carousel Auto-Cycle
-  $(document).ready(function() {
-    $('.mini-carousel').carousel({
-      interval: 6000
-    })
-  });
-
 
 /*===================================================================================
-  ==============================FACEBOOK SHARE PLUGIN================================
+  ========================FACEBOOK LIKE & SHARE POST PLUGIN==========================
   =================================================================================== */
 
+// Like Post
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=758749107492947";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+// Share Post
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;

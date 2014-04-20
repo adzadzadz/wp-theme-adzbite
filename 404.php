@@ -18,7 +18,7 @@
             <div class="home-content">
                 <div class="jumbotron" style="color: #333333;">
                     <h1>404 Page Not Found</h1>
-                    <p>you may want to search it again</p>
+                    <p>...</p>
                     <p><a class="btn btn-primary btn-lg" role="button" href="<?= home_url(); ?>" style="color: #fff;">Home</a></p>
                 </div>
            </div>
