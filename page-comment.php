@@ -23,7 +23,7 @@
 
 				<div class="home-content">
 
-				<?php if ( has_post_thumbnail() ) {the_post_thumbnail();} ?>
+				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');} ?>
 
 				<?php the_content(); ?>
 				<?php comment_form(); ?>

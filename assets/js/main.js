@@ -9,6 +9,15 @@ $(document).ready(function() {
 
   $("#top-carousel").owlCarousel({
     items : 4,
+    itemsCustom : false,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [980,3],
+    itemsTablet: [768,3],
+    itemsTabletSmall: false,
+    itemsMobile : [479,2],
+    singleItem : false,
+    itemsScaleUp : false,
+
     lazyLoad : true,
     navigation : false,
 
