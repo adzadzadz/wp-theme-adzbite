@@ -1,27 +1,30 @@
 <?php
+
 /*
  * Template Name: 404
  */
-get_header(); ?>
 
-	<div class="row  error-page">
-    	<div class="span12">
-            <div class="vvbig">404</div>
-            <div class="vbig">Page Not Found</div>
-        </div>
-	</div>
+?>
 
-    <!-- Search Box -->
-    <div class="row mb80">
-        <div class="span12">
-            <div class="search-block clearfix">
-                    <div class="error-serch-txt">you may want to search it again</div>
-                    <div class="page-search">
-                        <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
-                            <input type="text" name="s" placeholder="Type keywords..." value="" />
-                        </form>
-                    </div>
-            </div>
-        </div>
+
+
+<?php get_header(); ?>
+<div id="page-content">
+    <?php get_sidebar( 'left' ); ?>
+    <?php get_template_part( 'content', 'top' ); ?> 
+    <div class="col-md-10 gray">
+        <section class="center-content col-sm-9">
+            <div class="page_title_bg"><h2 class="page_title">ERROR!</h2></div>
+            <div class="home-content">
+                <div class="jumbotron" style="color: #333333;">
+                    <h1>404 Page Not Found</h1>
+                    <p>you may want to search it again</p>
+                    <p><a class="btn btn-primary btn-lg" role="button" href="<?= home_url(); ?>" style="color: #fff;">Home</a></p>
+                </div>
+           </div>
+        </section>
+        <?php get_sidebar( 'right' ); ?>
     </div>
+</div>
+<?php get_footer(); ?>
 <?php get_footer(); ?>
