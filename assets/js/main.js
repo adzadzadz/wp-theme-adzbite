@@ -71,7 +71,7 @@ $(document).ready(function() {
 // ===================================================
 // ===================== Contact =====================
 // ===================================================
-$(".adzbite-contact .result").html('<div class="alert alert-info"><strong>Sending message.</strong> Please wait.</div>');
+
 function validateForm() {
   var $adzbite_contact_form_name = $('.adzbite-contact form').find('input#name').val(),
       $adzbite_contact_form_email = $('.adzbite-contact form').find('input#email').val(),
