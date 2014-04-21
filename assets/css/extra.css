@@ -311,6 +311,7 @@ ol.commentlist{
 }
 ol.commentlist .children {
 	margin-top: 10px;
+	margin-bottom: 10px;
 	padding: 20px 20px;
 	background: #1C1C1B;
 }
@@ -388,6 +389,19 @@ ol.commentlist .children {
 	max-height: 90%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+/*
+*
+* Contact
+*
+*/
+
+.adzbite-contact form .alert {
+	display: none;
+	margin-top: 5px;
+	padding: 3px 7px;
+	font-size: .8em;
 }
 
 /*

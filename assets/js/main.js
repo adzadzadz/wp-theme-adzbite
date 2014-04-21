@@ -41,10 +41,10 @@ $(document).ready(function() {
 // ===================== Lightbox ====================
 // ===================================================
   $('.lb_thumb').hover(function () {
-      $(this).find('div.text').fadeIn('slow');
+      $(this).find('div.text').fadeIn('fast');
   });
   $('.lb_thumb').mouseleave(function () {
-      $(this).find('div.text').fadeOut('slow');
+      $(this).find('div.text').fadeOut('fast');
   });
   $('.lb_thumb').click(function(e) {
       var img_link = $(this).find('img').data('link');
@@ -65,12 +65,75 @@ $(document).ready(function() {
     }
   });
 
+
+
+
+// ===================================================
+// ===================== Contact =====================
+// ===================================================
+$(".adzbite-contact .result").html('<div class="alert alert-info"><strong>Sending message.</strong> Please wait.</div>');
+function validateForm() {
+  var $adzbite_contact_form_name = $('.adzbite-contact form').find('input#name').val(),
+      $adzbite_contact_form_email = $('.adzbite-contact form').find('input#email').val(),
+      $adzbite_contact_form_website = $('.adzbite-contact form').find('input#website').val(),
+      $adzbite_contact_form_message = $('.adzbite-contact form').find('input#message').val();
+
+      if($adzbite_contact_form_name == "") {
+        $('.adzbite-contact .alert').slideUp('fast');
+        $('.alert-name').slideDown("fast");
+        $('.alert-name').html('Please enter your <strong>name</strong>');
+      }
+      else if($adzbite_contact_form_name.length < 3) {
+        $('.adzbite-contact .alert').slideUp('fast');
+        $('.alert-name').slideDown("fast");
+        $('.alert-name').html('<strong>Name</strong> must be at least 3 characters long.');
+      }
+      else if($adzbite_contact_form_email == "") {
+        $('.adzbite-contact .alert').slideUp('fast');
+        $('.alert-email').slideDown("fast");
+        $('.alert-email').html('Please enter an <strong>email address</strong>');
+      }
+      else if(!validateEmail($adzbite_contact_form_email)) {
+        $('.adzbite-contact .alert').slideUp('fast');
+        $('.alert-email').slideDown("fast");
+        $('.alert-email').html('<strong>Email</strong> example: name@domain.com');
+      }
+      else {
+        return true;
+      }
+
+
+  function validateEmail(v) {
+    var r = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+    return (v.match(r) == null) ? false : true;
+  }
+}
+
+
+//FORM functions - START
+  var $adzbite_contact_form_url = $('.adzbite-contact form').attr('action'),
+      $adzbite_contact_form_method = $('.adzbite-contact form').attr('method');
+
+  $(".adzbite-contact-button").click(function(){
+    if(validateForm()) {
+      $.ajax({
+      url:$adzbite_contact_form_url,
+      method: $adzbite_contact_form_method,
+      beforeSend:function() {
+          $('.adzbite-contact .alert').slideUp('fast');
+          $(".adzbite-contact .result").slideDown("slow");
+          $(".adzbite-contact .result").html('<div class="alert alert-info"><strong>Sending message.</strong> Please wait.</div>');
+      },
+      success:function(data){
+        $('.adzbite-contact .alert').slideUp('fast');
+        $(".adzbite-contact .result").slideDown("slow");
+        $(".adzbite-contact .result").html(data);
+    }});
+    }
+  });
+//FORM funtions - END
+
 });
-
-
-
-
-
 
 /*===================================================================================
   =============================FACEBOOK LIKE PAGE PLUGIN=============================
@@ -108,3 +171,6 @@ $(document).ready(function() {
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=758749107492947";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
+
