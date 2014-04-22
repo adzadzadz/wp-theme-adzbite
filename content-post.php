@@ -7,8 +7,11 @@
 	 */
 
 ?>
-
-
+<?php if ( has_post_thumbnail() ) {?>
+	<div class="wp_featured col-xs-12">
+		<a href="<?= get_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+	</div>
+<?php } ?>
 <div class="blog-contain">
 	<h1 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 	<div class="blog-info">
@@ -25,9 +28,7 @@
 		</div>
 	<?php else: ?>
 		<?php the_content();?>
-		<blockquote>
-			by: <?php the_author();?>
-		</blockquote>
+		<p class="wp_tags"><small><?php the_tags(); ?></small></p>
 		<div class="row post-social-plugin">
 			<div class="col-md-1">
 				<div class="fb-like" data-colorscheme="light" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>

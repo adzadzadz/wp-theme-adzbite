@@ -11,7 +11,6 @@ require_once 'inc/shortcodes.php';
 require_once 'inc/theme-options.php';
 require_once 'inc/post-types.php';
 
-
 /**
  * Theme Supports
  */

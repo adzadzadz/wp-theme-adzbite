@@ -5,14 +5,31 @@
 	 *
 	 */
 
-?>
 
-
-<?php
-
-if($_SERVER['REQUEST_METHOD'] != 'POST') {
-	header("location:" . $_SERVER['HTTP_REFERER']);
-	exit;
+if(isset($_POST['name']) and isset($_POST['email'])){
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	if (isset($_POST['website'])) {
+		$website = $_POST['website'];
+	}
+	else {
+		$website = 'NONE!';
+	}
 }
+if (isset($_POST['message'])) {
+	if(trim($_POST['message']) != "") {
+			$message = $_POST['message'];
+			// $to = get_bloginfo( 'admin_email' );
+			$to = 'storytellercontact2@gmail.com';
+			$subject = 'Adzbite Contact Form';
+			$headers = 'Name: ' . $name . ' \n Email: ' . $email . '\n Website: ' . $website;
 
-echo '<div class="alert alert-success"><strong>Sent!</strong> You will get a response within 12 hours.</div>';
+		mail( $to, $subject, $message, $headers);
+		echo '<div class="alert alert-success"><strong>Sent!</strong> You will get a response within 12 hours.</div>';
+		exit;
+	}
+	else {
+		echo '<div class="alert alert-danger"><strong>Something is wrong!</strong> There is no message to send.</div>';
+		exit;
+	}
+}

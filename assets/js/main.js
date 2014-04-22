@@ -72,11 +72,14 @@ $(document).ready(function() {
 // ===================== Contact =====================
 // ===================================================
 
+ 
+
 function validateForm() {
-  var $adzbite_contact_form_name = $('.adzbite-contact form').find('input#name').val(),
-      $adzbite_contact_form_email = $('.adzbite-contact form').find('input#email').val(),
-      $adzbite_contact_form_website = $('.adzbite-contact form').find('input#website').val(),
-      $adzbite_contact_form_message = $('.adzbite-contact form').find('input#message').val();
+
+    var $adzbite_contact_form_name = $('.adzbite-contact form').find('input#name').val(),
+        $adzbite_contact_form_email = $('.adzbite-contact form').find('input#email').val(),
+        $adzbite_contact_form_website = $('.adzbite-contact form').find('input#website').val(),
+        $adzbite_contact_form_message = $('.adzbite-contact form').find('textarea#message').val();
 
       if($adzbite_contact_form_name == "") {
         $('.adzbite-contact .alert').slideUp('fast');
@@ -114,11 +117,17 @@ function validateForm() {
   var $adzbite_contact_form_url = $('.adzbite-contact form').attr('action'),
       $adzbite_contact_form_method = $('.adzbite-contact form').attr('method');
 
-  $(".adzbite-contact-button").click(function(){
+  $(".adzbite-contact-button").click(function () {
+
     if(validateForm()) {
+      var $name = $('.adzbite-contact form').find('input#name').val(),
+          $email = $('.adzbite-contact form').find('input#email').val(),
+          $website = $('.adzbite-contact form').find('input#website').val(),
+          $message = $('.adzbite-contact form').find( "textarea#message" ).val();
       $.ajax({
       url:$adzbite_contact_form_url,
-      method: $adzbite_contact_form_method,
+      data: 'name=' + $name + '&email=' + $email + '&website=' + $website + '&message=' + $message,
+      type: $adzbite_contact_form_method,
       beforeSend:function() {
           $('.adzbite-contact .alert').slideUp('fast');
           $(".adzbite-contact .result").slideDown("slow");

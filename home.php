@@ -19,8 +19,6 @@
 
 				<div class="home-content">
 
-				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');} ?>
-
 				<?php get_template_part('content','post'); ?>
 					
 				</div>

@@ -24,10 +24,8 @@
 				
 				<div class="home-content">
 
-				<?php if ( has_post_thumbnail() ) {the_post_thumbnail();} ?>
-
 				<?php get_template_part('content','post'); ?>
-					
+				
 				</div>
 				<?php endwhile; else: ?>
 

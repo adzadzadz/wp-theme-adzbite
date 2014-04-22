@@ -82,7 +82,17 @@ a:hover {
 .title {
 	color: white;
 }
-
+.wp_featured {
+	overflow: hidden;
+	padding: 0 0;
+	margin-bottom: 20px;
+	border: 3px #000 solid;
+	max-height: 250px;
+}
+.wp_tags a{
+	color: #000;
+	text-decoration: underline;
+}
 /*
  *
  * HEADER
@@ -439,6 +449,9 @@ ol.commentlist .children {
 		margin-top: 35px;
 	}
 	aside.left {
+		display: none !important;
+	}
+	footer {
 		display: none !important;
 	}
 }
