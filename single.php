@@ -17,9 +17,10 @@
 		<section class="center-content col-sm-9 blog-page">
 
 		<div class="blog-bg">
-
-			<div class="page_title_bg"><h2 class="page_title" style="color: #fff;">Blog</h2></div>
-
+			<div class="page_title_bg">
+				<div class="col-md-3 col-sm-12 page_title"><h2 style="color: #fff;">Article</h2></div>
+				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
+			</div>
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 				
 				<div class="home-content">

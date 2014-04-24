@@ -10,6 +10,7 @@
 require_once 'inc/shortcodes.php';
 require_once 'inc/theme-options.php';
 require_once 'inc/post-types.php';
+require_once 'inc/breadcrumb.php';
 
 /**
  * Theme Supports
@@ -42,6 +43,8 @@ function adzbite_init() {
 	wp_enqueue_style( 'bootstrap3', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'owl_carousel_css', get_template_directory_uri() . '/assets/owl_carousel/owl.carousel.css' );
 	wp_enqueue_style( 'owl_theme', get_template_directory_uri() . '/assets/owl_carousel/owl.theme.css' );
+	wp_enqueue_style( 'font', 'http://fonts.googleapis.com/css?family=Oswald:400,300' );
+	wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'adzbitecss', get_template_directory_uri() . '/assets/css/extra.css' );
 	wp_register_script( 'bootstrap3js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js' );
 	wp_register_script( 'owl_carousel_js', get_template_directory_uri() . '/assets/owl_carousel/owl.carousel.js' );
@@ -65,8 +68,8 @@ function left_sidebar() {
 		'id' => 'left_sidebar',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '<div class="widget-title">',
-		'after_title' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	register_sidebars(1, array(
@@ -74,8 +77,8 @@ function left_sidebar() {
 		'id' => 'right_sidebar',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '<div class="widget-title">',
-		'after_title' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'left_sidebar' );

@@ -13,6 +13,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+	<meta property="fb:app_id" content="{758749107492947}"/>
 	<title>Adzbite <?php echo get_bloginfo( 'name' ); ?><?php wp_title( ' | ', true, 'left' ); ?></title>
 	<?php wp_head(); ?>
 </head>
@@ -24,7 +25,13 @@
 			<a href="<?= home_url(); ?>"><span style="color: #fff;">adzbite</span><?= get_bloginfo( 'name' ); ?></a> 
 		</div>
 		<div class="left-nav col-md-5 col-sm-5 col-xs-7">
-			<?php wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
+
+			<?php //wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
+			<?php $wp_list_cat_args = array('title_li' =>'');?>
+			<div class="category_menu">
+				<li><a href="<?php echo get_page_uri( 34 ); ?>">Latest</a></li>
+				<?php wp_list_categories( $wp_list_cat_args ); ?>
+			</div>
 		</div>
 		<div class="right-nav col-md-5 col-sm-4 col-xs-5">
 			<ul class="float-li-right">
