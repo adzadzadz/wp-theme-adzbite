@@ -21,7 +21,7 @@
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
 				<div class="home-content">
-
+				
 				<?php get_template_part('content','post'); ?>
 					
 				</div>

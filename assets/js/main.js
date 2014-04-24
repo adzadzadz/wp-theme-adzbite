@@ -101,6 +101,11 @@ function validateForm() {
         $('.alert-email').slideDown("fast");
         $('.alert-email').html('<strong>Email</strong> example: name@domain.com');
       }
+      else if($adzbite_contact_form_message.length < 25) {
+        $('.adzbite-contact .alert').slideUp('fast');
+        $('.alert-message').slideDown("fast");
+        $('.alert-message').html('<strong>Message</strong> must be at least 25 characters long. :P');
+      }
       else {
         return true;
       }
