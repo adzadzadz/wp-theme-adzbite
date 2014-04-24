@@ -26,7 +26,7 @@
 	<?php if(!is_single()) : ?>
 		<?php the_excerpt(); ?>
 		<div class="blog-continue_reading">
-			<a href="<?php the_permalink();?>">Continue Reading &rarr;</a>
+			<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Continue Reading</a>
 		</div>
 	<?php else: ?>
 		<div class="blog-content">
