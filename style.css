@@ -60,14 +60,12 @@ h6 {
 	text-align: center;
 	background: #080808;
 	min-height: 60px;
-	max-width: 150px;
 }
 .page_title_cat {
 	padding-top: 12px;
 	text-align: center;
 	background: #080808;
 	min-height: 60px;
-	max-width: 400px;
 }
 .page_title_bg {
 	margin: 20px 0 0 0;
@@ -298,12 +296,13 @@ aside.right .widget-title {
 
 .top-content {
 	background: #0D0D0D;
+	padding-top: 10px;
 	padding-left: 0;
 	padding-right: 0;
-	height: 230px; /*TEMP*/
 	border-bottom: 2px #fff solid;
+	border-top: 2px #fff solid;
 }
-.top-content img:hover {
+.top-content .lb_thumb .text:hover {
 	cursor:pointer;
 }
 
@@ -516,7 +515,8 @@ ol.commentlist .children {
 		padding-right: 0px !important;
 	}
 	.top-content {
-		margin-top: 35px;
+		display: none !important;
+		/*margin-top: 35px;*/
 	}
 	aside.left {
 		display: none !important;

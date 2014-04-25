@@ -13,8 +13,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<meta property="fb:app_id" content="{758749107492947}"/>
-	<title>Adzbite <?php echo get_bloginfo( 'name' ); ?><?php wp_title( ' | ', true, 'left' ); ?></title>
+	<meta property="fb:app_id" content="272663612872931"/>
+	<title>Adzbite <?php echo get_bloginfo( 'name' ); ?><?php wp_title( ' &raquo; ', true, 'left' ); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -29,7 +29,7 @@
 			<?php //wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
 			<?php $wp_list_cat_args = array('title_li' =>'');?>
 			<div class="category_menu">
-				<li><a href="<?php echo get_page_uri( 34 ); ?>">Latest</a></li>
+				<li><a href="http://www.adzbite.com/<?php echo get_page_uri( 34 ); ?>">Latest</a></li>
 				<?php wp_list_categories( $wp_list_cat_args ); ?>
 			</div>
 		</div>

@@ -19,7 +19,7 @@ $(document).ready(function() {
     itemsScaleUp : false,
 
     lazyLoad : true,
-    navigation : false,
+    navigation : true,
 
     //Autoplay
     autoPlay : true,

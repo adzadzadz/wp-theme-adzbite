@@ -15,8 +15,8 @@
 	<div class="col-md-10 gray">
 		<section class="center-content col-sm-9">
 			<div class="page_title_bg">
-				<div class="col-md-4 page_title"><h2>Articles</h2></div>
-				<div id="breadcrumb_bg" class="col-md-8"><?php the_breadcrumb(); ?></div>
+				<div class="col-md-3 col-sm-12 page_title"><h2>Articles</h2></div>
+				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
 			</div>
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
