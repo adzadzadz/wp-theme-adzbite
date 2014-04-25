@@ -27,7 +27,10 @@
 		<div class="left-nav col-md-5 col-sm-5 col-xs-7">
 
 			<?php //wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
-			<?php $wp_list_cat_args = array('title_li' =>'');?>
+			<?php $wp_list_cat_args = array(
+				'title_li' => '',
+				'current_category' => 1,
+			);?>
 			<div class="category_menu">
 				<li><a href="http://www.adzbite.com/<?php echo get_page_uri( 34 ); ?>">Latest</a></li>
 				<?php wp_list_categories( $wp_list_cat_args ); ?>

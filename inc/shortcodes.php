@@ -55,11 +55,11 @@ add_shortcode('lightbox','lightbox');
 
 function lightbox($atts, $content = null)
 {
-	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#'),$atts));
+	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'height' => '100%', 'width' => "100%"),$atts));
 
 	$output = '';
-	$output .= '<div class="lb_thumb">';
-	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '">';
+	$output .= '<div class="lb_thumb" style="height:' . $height . '; width:' . $width . ';">';
+	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '" height="' . $height . '" width="' . $width . '"' . $img_attr . '>';
 	$output .= '</div>';
 
 	return $output;

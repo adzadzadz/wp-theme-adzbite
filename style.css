@@ -302,7 +302,7 @@ aside.right .widget-title {
 	border-bottom: 2px #fff solid;
 	border-top: 2px #fff solid;
 }
-.top-content .lb_thumb .text:hover {
+.lb_thumb{
 	cursor:pointer;
 }
 
