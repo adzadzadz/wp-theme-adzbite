@@ -30,6 +30,10 @@
 			<?php $wp_list_cat_args = array(
 				'title_li' => '',
 				'current_category' => 1,
+				'exclude' => '1, 6',
+				'hide_empty' => 0,
+				'order_by' => 'ID',
+
 			);?>
 			<div class="category_menu">
 				<li><a href="http://www.adzbite.com/<?php echo get_page_uri( 34 ); ?>">Latest</a></li>

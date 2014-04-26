@@ -18,7 +18,7 @@ $options = get_option('theme_options');
 	<?php get_template_part( 'content', 'top' ); ?> 
 	<div class="col-md-10 gray">
 		<section class="center-content col-sm-9">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<div id="carousel-example-generic" class="carousel slide carousel-home" data-ride="carousel">
 			<!-- Indicators -->
 				<!-- <ol class="carousel-indicators">
 					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -56,7 +56,7 @@ $options = get_option('theme_options');
 				
 				<div class="home-content">
 
-				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');} ?>
+				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
 
 				<?php the_content(); ?>
 					
