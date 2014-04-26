@@ -255,6 +255,7 @@ aside.left #menu-main {
 aside.left #menu-main li {
 	list-style: none;
 	border-bottom:1px #ADADAC solid;
+	padding: 5px 0;
 }
 aside.left #menu-main a{
 	padding-left: 20px;
@@ -321,6 +322,9 @@ aside.right .widget-title {
 }
 .carousel-inner {
 	max-height: 450px;
+}
+.carousel-home {
+	width: 
 }
 
 /*
