@@ -20,7 +20,7 @@ Top and Home Carousel Setup:
 - For home carousel, Add caption just bellow the image link 
 
 Shortcodes:
-- Title: [title class=""][/title] 
+- Title: [title class=""][/title]
 Sample: [title class="cool_title"]My Title[/title]
 
 - Lightbox: [lightbox class="" img="#" img_link"" alt="" img_attr="" height="100%" width="100%"]
