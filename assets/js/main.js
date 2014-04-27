@@ -4,6 +4,23 @@ var $=jQuery.noConflict();
 $(document).ready(function() {
  
 // =================================================
+// ================== Mobile Menu ==================
+// =================================================
+
+  $("header .mobile-menu .glyphicon").click(function () {
+    if($("header .mobile-menu-view").is(":hidden")) {
+      $("header .mobile-menu-view:hidden").show();
+    }
+    else {
+      $("header .mobile-menu-view:visible").hide();
+    }
+  });
+  $(document).on('click', function( e ) {
+    // $("header .mobile-menu-view:visible").hide();
+  });
+
+
+// =================================================
 // ============= Top Carousel Script ===============
 // =================================================
 

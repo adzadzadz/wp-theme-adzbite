@@ -12,8 +12,8 @@
 <div id="page-content">
 	<?php get_sidebar( 'left' ); ?>
 	<?php get_template_part( 'content', 'top' ); ?> 
-	<div class="col-md-10 gray">
-		<section class="center-content col-sm-9">
+	<div class="gray">
+		<section class="center-content col-lg-7 col-md-7 col-sm-9">
 
 				<div class="page_title_bg"><h2 class="page_title_cat">Archives</h2></div>
 				

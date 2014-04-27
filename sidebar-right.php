@@ -9,7 +9,7 @@
 ?>
 
 
-<aside class="right col-sm-3">
+<aside class="right col-lg-3 col-md-3 col-sm-3">
 	<div class="wp-sidebar-widgets">
 		<?php if ( is_active_sidebar( 'right_sidebar' ) ) : ?>
 			<ul id="sidebar">

@@ -9,8 +9,8 @@
 ?>
 
 
-<aside class="left col-md-2 col-sm-3">
-	<div class="col-md-2 col-sm-3 col-xs-12 tagline">
+<aside class="left col-lg-2 col-md-2 col-sm-3 ">
+	<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 tagline">
 		<?=  bloginfo( 'description' ); ?>
 	</div>
 	<div class="aside-left-menu">

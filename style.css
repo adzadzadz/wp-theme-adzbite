@@ -112,6 +112,10 @@ a:hover {
 	border: 3px #000 solid;
 	max-height: 250px;
 }
+.wp_featured img {
+	all: none;
+	width: 100% !important;
+}
 .wp_tags a{
 	color: #000;
 	text-decoration: underline;
@@ -140,23 +144,23 @@ header ul li {
 	position: relative;
 }
 header ul li a:link {
-	padding: 9px 8px;
+	padding: 3px 8px 8px; 
 }
 header ul li a:hover {
 	text-decoration: none;
 	background: #044500;
 	color: #fff;
 }
-header li .children {
+header .wide-screen-menu li .children {
 	display: none;
 	position: absolute;
 	bottom: -70 !important;
 	margin-top: 13px;
 }
-header li .children a{
+header .wide-screen-menu li .children a{
 	background-color: rgba(0,0,0,0.8);
 }
-header li .children a:hover{
+header .wide-screen-menu li .children a:hover{
 	background-color: rgba(0,0,0,0.9) !important;
 	color: #fff !important;
 }
@@ -199,6 +203,51 @@ nav.mini div {
 	margin: 0 !important;
 }
 
+/*
+*
+* Mobile Menu
+*
+*/
+header .mobile-menu {
+	display: none;
+	text-align: center;
+}
+header .mobile-menu .glyphicon {
+	margin-top: 5px;
+	margin-left: 10px;
+	font-size: 1.5em;
+	color: #fff;
+}
+header .mobile-menu .glyphicon:hover {
+	color: #24F728;
+	cursor:pointer;
+}
+header .mobile-menu-view {
+	margin-top: 5px;
+	text-align: center;
+	display: none;
+	background: rgba(0,0,0,0.8);
+}
+header .mobile-menu-view ul{
+	text-decoration: none;
+	margin-bottom: 2px;
+}
+header .mobile-menu-view ul li{
+
+}
+header .mobile-menu-view ul li a{
+	display: block;
+}
+header li .children {
+	display: none;
+}
+header .mobile-menu-view li .children a{
+	background-color: rgba(0,0,0,0.8);
+}
+header .mobile-menu-view li .children a:hover{
+	background-color: rgba(0,0,0,0.9) !important;
+	color: #fff !important;
+}
 /*
 *
 * ASIDE/SIDEBAR
@@ -487,6 +536,7 @@ ol.commentlist .children {
 	font-size: .8em;
 }
 
+
 /*
 *
 * Shortcodes
@@ -518,9 +568,18 @@ ol.commentlist .children {
 		padding-left: 0px !important;
 		padding-right: 0px !important;
 	}
-	.top-content {
+	header .wide-screen-menu {
+		display: none !important;
+	}
+	header .mobile-menu {
+		display: inline !important;
+	}
+	section.top-content {
 		display: none !important;
 		/*margin-top: 35px;*/
+	}
+	section.center-content {
+		margin-top: 35px;
 	}
 	aside.left {
 		display: none !important;

@@ -13,8 +13,8 @@
 	<div class="gray-bg">
 	<?php get_sidebar( 'left' ); ?>
 	<?php get_template_part( 'content', 'top' ); ?> 
-	<div class="col-md-10 col-sm-9 gray">
-		<section class="center-content col-sm-9">
+	<div class="gray">
+		<section class="center-content col-lg-7 col-md-7 col-sm-9">
 			<div class="home-content">
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 

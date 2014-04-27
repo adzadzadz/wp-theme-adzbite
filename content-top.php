@@ -10,7 +10,7 @@ $options = get_option('theme_options');
 
 ?>
 
-<section class="top-content col-md-10 col-sm-9">
+<section class="top-content col-lg-10 col-md-10 col-sm-9">
 	<div class="mini-featured">
 		<div id="top-carousel" class="owl-carousel">
 		<?php for ($x=0; $x < (int)$options['carousel_img_count']; $x++) { ?>

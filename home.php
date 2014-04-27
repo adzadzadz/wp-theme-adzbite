@@ -12,8 +12,8 @@
 <div id="page-content">
 	<?php get_sidebar( 'left' ); ?>
 	<?php get_template_part( 'content', 'top' ); ?> 
-	<div class="col-md-10 gray">
-		<section class="center-content col-sm-9">
+	<div class="gray">
+		<section class="center-content col-lg-7 col-md-7 col-sm-9">
 			<div class="page_title_bg">
 				<div class="col-md-3 col-sm-12 page_title"><h2>Articles</h2></div>
 				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
