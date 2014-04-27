@@ -20,17 +20,18 @@ $options = get_option('theme_options');
 		<section class="center-content col-lg-7 col-md-7 col-sm-9">
 			<div id="carousel-example-generic" class="carousel slide carousel-home" data-ride="carousel">
 			<!-- Indicators -->
-				<!-- <ol class="carousel-indicators">
+				<ol class="carousel-indicators">
 					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				</ol> -->
+					<?php for ($x=1; $x < (int)$options['home_carousel_img_count']; $x++) { ?> 
+						<li data-target="#carousel-example-generic" data-slide-to="<?= $x ?>"></li>
+					<?php } ?>
+				</ol>
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
 				<?php for ($x=0; $x < (int)$options['home_carousel_img_count']; $x++) { ?> 
 					<div class="item <?php if($x == 0){echo 'active';}?>">
-						<img src="<?= $options['home_carousel_' . $x]?>" alt="...">
+						<img src="<?= $options['home_carousel_' . $x]?>" alt="<?= $options['home_carousel_alt_' . $x]?>">
 						<div class="carousel-caption">
 							<?= $options['home_carousel_caption_' . $x]?>
 						</div>

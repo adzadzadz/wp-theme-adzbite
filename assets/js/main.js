@@ -4,6 +4,20 @@ var $=jQuery.noConflict();
 $(document).ready(function() {
  
 // =================================================
+// ====================== INIT =====================
+// =================================================
+
+  $('header li').hover(function () {
+    if ($(this).find('ul.sub-menu') != undefined) {
+      $(this).find('ul.sub-menu').show();
+    }
+    $(this).mouseleave(function () {
+      $(this).find('ul.sub-menu').hide();
+    })
+  });
+
+
+// =================================================
 // ================== Mobile Menu ==================
 // =================================================
 
@@ -65,10 +79,10 @@ $(document).ready(function() {
   });
   $('.lb_thumb').click(function(e) {
       var img_link = $(this).find('img').data('link');
-      
+      var img_alt = $(this).find('img').attr('alt');
       if ($('.lightbox').length > 0) { // #lightbox exists
                      //place href as img src value
-          $('.lightbox').html('<img src="' + img_link + '" />');
+          $('.lightbox').html('<img src="' + img_link + '" alt="' + img_alt + '"/>');
           //show lightbox window - you could use .show('fast') for a transition
           $('.lightbox').fadeIn('fast');
       }
@@ -164,14 +178,7 @@ function validateForm() {
   });
 //FORM funtions - END
 
-  $('header li').hover(function () {
-    if ($(this).find('.children') != undefined) {
-      $(this).find('.children').show();
-    }
-    $(this).mouseleave(function () {
-      $(this).find('.children').hide();
-    })
-  });
+  
 
 });
 

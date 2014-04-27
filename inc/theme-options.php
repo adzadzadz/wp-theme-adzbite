@@ -42,11 +42,13 @@ function register_and_build_fields() {
 	for ($x=0; $x < (int)$options['carousel_img_count']; $x++) { 
 		add_settings_field('top_carousel_' . $x, 'Image Url ' . $x .':', 'top_carousel_img_input_' . $x, __FILE__, 'top_carousel');
 		add_settings_field('top_carousel_link_' . $x, 'Image Lightbox Link ' . $x .':', 'top_carousel_link_input_' . $x, __FILE__, 'top_carousel');
+		add_settings_field('top_carousel_alt_' . $x, 'Image Alternate Text ' . $x .':', 'top_carousel_alt_input_' . $x, __FILE__, 'top_carousel');
 	}
 
 	for ($x=0; $x < (int)$options['home_carousel_img_count']; $x++) { 
 		add_settings_field('home_carousel_' . $x, 'Image Url ' . $x .':', 'home_carousel_img_input_' . $x, __FILE__, 'home_carousel');
 		add_settings_field('home_carousel_caption_' . $x, 'Image Caption ' . $x .' (HTML Tags Allowed):', 'home_carousel_caption_input_' . $x, __FILE__, 'home_carousel');
+		add_settings_field('home_carousel_alt_' . $x, 'Image Alternate Text ' . $x .':', 'home_carousel_alt_input_' . $x, __FILE__, 'home_carousel');
 	}
 	
 }
@@ -132,7 +134,41 @@ function top_carousel_link_input_9() {
 	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_link_9]' value='{$options['top_carousel_link_9']}' type='text'>";
 }
 function top_carousel_link_input_10() {
-	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_link_10]' value='{$options['top_carouse_linkl_10']}' type='text'>";
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_link_10]' value='{$options['top_carouse_link_10']}' type='text'>";
+}
+// Top Carousel Link
+function top_carousel_alt_input_0() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_0]' value='{$options['top_carousel_alt_0']}' type='text'>";
+}
+function top_carousel_alt_input_1() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_1]' value='{$options['top_carousel_alt_1']}' type='text'>";
+}
+function top_carousel_alt_input_2() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_2]' value='{$options['top_carousel_alt_2']}' type='text'>";
+}
+function top_carousel_alt_input_3() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_3]' value='{$options['top_carousel_alt_3']}' type='text'>";
+}
+function top_carousel_alt_input_4() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_4]' value='{$options['top_carousel_alt_4']}' type='text'>";
+}
+function top_carousel_alt_input_5() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_5]' value='{$options['top_carousel_alt_5']}' type='text'>";
+}
+function top_carousel_alt_input_6() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_6]' value='{$options['top_carousel_alt_6']}' type='text'>";
+}
+function top_carousel_alt_input_7() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_7]' value='{$options['top_carousel_alt_7']}' type='text'>";
+}
+function top_carousel_alt_input_8() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_8]' value='{$options['top_carousel_alt_8']}' type='text'>";
+}
+function top_carousel_alt_input_9() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_9]' value='{$options['top_carousel_alt_9']}' type='text'>";
+}
+function top_carousel_alt_input_10() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[top_carousel_alt_10]' value='{$options['top_carouse_alt_10']}' type='text'>";
 }
 // Home Carousel
 function home_carousel_img_input_0() {
@@ -165,6 +201,22 @@ function home_carousel_caption_input_3() {
 }
 function home_carousel_caption_input_4() {
 	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[home_carousel_caption_4]' value='{$options['home_carousel_caption_4']}' type='text'>";
+}
+//Home Carousel Alternate Text
+function home_carousel_alt_input_0() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[home_carousel_alt_0]' value='{$options['home_carousel_alt_0']}' type='text'>";
+}
+function home_carousel_alt_input_1() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[home_carousel_alt_1]' value='{$options['home_carousel_alt_1']}' type='text'>";
+}
+function home_carousel_alt_input_2() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[home_carousel_alt_2]' value='{$options['home_carousel_alt_2']}' type='text'>";
+}
+function home_carousel_alt_input_3() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[home_carousel_alt_3]' value='{$options['home_carousel_alt_3']}' type='text'>";
+}
+function home_carousel_alt_input_4() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[home_carousel_alt_4]' value='{$options['home_carousel_alt_4']}' type='text'>";
 }
 //===================================================================
 //========================= IMAGE URLS - END ========================

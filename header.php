@@ -6,16 +6,6 @@
 	 *
 	 */
 
-
-$wp_list_cat_args = array(
-	'title_li' => '',
-	'current_category' => 1,
-	'exclude' => '1, 6',
-	'hide_empty' => 0,
-	'order_by' => 'ID',
-
-);
-
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +26,8 @@ $wp_list_cat_args = array(
 		</div>
 		<div class="left-nav wide-screen-menu col-lg-6 col-md-6 col-sm-5">
 
-			<?php //wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
-			<div class="category_menu">
-				<li><a href="http://www.adzbite.com/<?php echo get_page_uri( 34 ); ?>">Latest</a></li>
-				<?php wp_list_categories( $wp_list_cat_args ); ?>
-			</div>
+			<?php wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
+
 		</div>
 		<div class="right-nav col-lg-4 col-md-4 col-sm-4 col-xs-5 wide-screen-menu">
 			<ul class="float-li-right">
@@ -61,9 +48,7 @@ $wp_list_cat_args = array(
 		</div>
 		<div class="mobile-menu-view col-xs-12">
 			<ul>
-				<?php //wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s float-li-left">%3$s</ul>', )); ?>
-				<li><a href="http://www.adzbite.com/<?php echo get_page_uri( 34 ); ?>">Latest</a></li>
-				<?php wp_list_categories( $wp_list_cat_args ); ?>
+				<?php wp_nav_menu( array('theme_location' => 'top_menu_left', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', )); ?>
 				<?php if ( is_user_logged_in() ) { ?> 
 					<li><a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 					<?php }

@@ -31,7 +31,7 @@
 				<?php the_content(); ?>
 				<br>
 				<br>
-				<div class="fb-comments" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-numposts="50" data-colorscheme="dark" data-width="756px"></div>
+				<div class="fb-comments" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-numposts="50" data-colorscheme="dark" data-width="550px"></div>
 				</div>
 				<?php endwhile; else: ?>
 
