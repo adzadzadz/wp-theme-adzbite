@@ -6,6 +6,7 @@
 	 *
 	 */
 
+$options = get_option('theme_options');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<meta property="fb:app_id" content="272663612872931"/>
-	<title>Adzbite <?php echo get_bloginfo( 'name' ); ?><?php wp_title( ' &raquo; ', true, 'left' ); ?></title>
+	<title><?php echo get_bloginfo( 'name' ); ?><?php wp_title( ' &raquo; ', true, 'left' ); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -22,7 +23,7 @@
 <header class="col-lg-12 col-sm-12 col-xs-12">
 	<nav class="mini">
 		<div class="brand col-lg-2 col-md-2 col-sm-3 col-xs-12">
-			<a href="<?= home_url(); ?>"><span style="color: #fff;">adzbite</span><?= get_bloginfo( 'name' ); ?></a> 
+			<a href="<?= home_url(); ?>"><img src="<?= $options['theme_logo'] ?>" alt="<?= get_bloginfo( 'name' ) ?> Logo"></a> 
 		</div>
 		<div class="left-nav wide-screen-menu col-lg-6 col-md-6 col-sm-5">
 

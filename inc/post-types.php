@@ -14,9 +14,10 @@ function create_post_type() {
 				'add_new_item' => 'Add New Project',
 				'edit_item' => 'Edit Project',
 			),
-		'public' => true,
-		'has_archive' => true,
-		'show_ui' => true,
+			'public' => true,
+			'has_archive' => true,
+			'show_ui' => true,
+			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes', 'post-formats'),
 		)
 	);
 }

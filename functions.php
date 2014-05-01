@@ -86,5 +86,3 @@ add_action( 'widgets_init', 'left_sidebar' );
 
 
 
-
-

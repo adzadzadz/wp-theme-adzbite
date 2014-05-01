@@ -9,15 +9,21 @@
 ?>
 <?php if ( has_post_thumbnail() ) {?>
 	<div class="wp_featured col-xs-12">
-		<a href="<?= get_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+		<?php if(!is_single()) { ?>
+			<a href="<?= get_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+		<?php } else { ?>
+			<div class="lb_thumb">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
+		<?php } ?>
 	</div>
 <?php } ?>
 <div class="blog-contain">
 	<h1 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 	<div class="blog-content">
 		<div class="blog-info">
+				
 				<span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>,
-				<span class="title">Authored by:</span>  <span class="info"><a href="<?php echo get_page_link(13);?>"> <?php the_author(); ?></a></span>,
 				<span class="title">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
 		</div>
 	</div>
@@ -31,8 +37,13 @@
 	<?php else: ?>
 		<div class="blog-content">
 			<?php the_content();?>
+			<br>
+			<div class="author-img">
+				<h5 class="title">Authored by:</h5>&nbsp;<span class="img"><?=  get_avatar( get_the_author_meta( 'ID' ), 32 ) ?></span>  <span class="info"><a href="<?php echo get_page_link(13);?>"> <?php the_author(); ?></a></span><br>
+			</div>
 		</div>
 		<p class="wp_tags"><small><?php the_tags(); ?></small></p>
+		<div class="horizontal-wall"></div>
 		<div class="row post-social-plugin">
 			<div class="col-md-1">
 				<div class="fb-like" data-colorscheme="light" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>

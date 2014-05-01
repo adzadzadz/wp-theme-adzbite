@@ -181,12 +181,14 @@ nav.mini div {
 	padding-right: 0px !important;
 }
 .brand {
-	padding-top: 6px;
+	/*padding-top: 6px;*/
 	background: #080808;
-	font-size: 1.2em;
 	height: 35px;
-	color: #18FF00;
 	text-align: center;
+}
+.brand a{
+	margin-left: auto;
+	margin-right: auto;
 }
 .brand a:hover {
 	text-decoration: none;
@@ -459,6 +461,9 @@ footer {
 	color: #fff;
 	text-decoration: underline;
 }
+.author-img a {
+	color: #000;
+}
 ol.commentlist{
 	padding: 20px 20px;
 	background: #30302F;
@@ -573,7 +578,11 @@ ol.commentlist .children {
 	background: #1C1C1B;
 	padding: 25px 15px;
 }
-
+.horizontal-wall {
+	border-bottom: 2px #333 solid;
+	margin-top: 5px;
+	margin-bottom: 10px; 
+}
 
 /*
 *

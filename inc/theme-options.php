@@ -29,12 +29,15 @@ function register_and_build_fields() {
 	$options = get_option('theme_options');
 
 	// add_settings_section( $id, $title, $callback, $page );
+	add_settings_section('general', 'General', 'general', __FILE__);
 	add_settings_section('top_carousel', 'Top Carousel Settings', 'top_carousel', __FILE__);
 	add_settings_section('home_carousel', 'Home Carousel Settings', 'home_carousel', __FILE__);
+	function general() {}
 	function top_carousel() {}
 	function home_carousel() {}
 
 	// add_settings_field( $id, $title, $callback, $page, $section, $args );
+	add_settings_field('theme_logo', 'Theme Logo URL:', 'theme_logo', __FILE__, 'general');
 	add_settings_field('carousel_img_count', 'Number of Images:', 'img_count', __FILE__, 'top_carousel');
 	add_settings_field('home_carousel_img_count', 'Number of Images:', 'home_img_count', __FILE__, 'home_carousel');
 
@@ -54,6 +57,12 @@ function register_and_build_fields() {
 }
 function validate_setting($theme_options) {
 	return $theme_options;
+}
+//===================================================================
+//============================ General ==============================
+//===================================================================
+function theme_logo() {
+	$options = get_option('theme_options'); echo "<input style='width: 500px;' name='theme_options[theme_logo]' value='{$options['theme_logo']}' type='text'>";
 }
 //===================================================================
 //======================= IMAGE COUNTS ==============================

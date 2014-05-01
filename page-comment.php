@@ -25,8 +25,12 @@
 				</div>
 
 				<div class="home-content">
+				
+				<div class="wp_featured col-xs-12">
+					
+					<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
 
-				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');} ?>
+				</div>
 
 				<?php the_content(); ?>
 				<br>
