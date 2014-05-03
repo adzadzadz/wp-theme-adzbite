@@ -58,15 +58,16 @@ $my_query = new WP_Query($args);
 							
 							<div class="col-xs-4">
 
-								<?php if ( has_post_thumbnail() ) {?> <a href="<?php the_permalink();?>"> <?php the_post_thumbnail('thumbnail');?> </a> <?php } ?>	
+								<?php if ( has_post_thumbnail() ) {?> <a href="<?php the_permalink();?>" class="img-thumbnail"> <?php the_post_thumbnail('thumbnail');?> </a> <?php } ?>	
 							</div>
 
 							<div class="col-xs-8">
 
 								<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+								<span class="title">Date Added:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
 								<?php the_excerpt(); ?>
 								<div class="blog-continue_reading">
-									<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Continue Reading</a>
+									<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Open Project</a>
 								</div>
 							</div>
 

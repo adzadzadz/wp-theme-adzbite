@@ -44,7 +44,13 @@ html, body {
 	background: #080808;
 	color: #A1AB97;
 	background-image:url('assets/imgs/adzbite-bg-2.png');
+	/*background-image:url('assets/imgs/ZenBG-2.png');*/
 }
+/*body {
+	background: #000;
+	background-image: url("assets/imgs/ZenBG-1.png"), url("assets/imgs/ZenBG-2.png");
+	background-repeat: repeat-x, repeat;
+}*/
 h1,
 h2,
 h3,
@@ -54,6 +60,10 @@ h6 {
 	margin: 0 0;
     font-weight: 400;
     text-rendering: auto;
+}
+.middle {
+	position: relative;
+	vertical-align: middle;
 }
 .page_title {
 	padding-top: 12px;
@@ -71,6 +81,9 @@ h6 {
 	margin: 20px 0 0 0;
 	background-color: rgba(127,127,127,0.2);
 	min-height: 60px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .gray {
 	/*background: #0D0D0D;*/
@@ -109,7 +122,13 @@ a:hover {
 	overflow: hidden;
 	padding: 0 0;
 	margin-bottom: 20px;
-	border: 3px #000 solid;
+	border: 3px #fff solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .wp_featured img {
 	all: none;
@@ -256,6 +275,7 @@ header .mobile-menu-view li .sub-menu a:hover{
 .widget-title {
 	padding: 5px 10px;
 	background-color: #121212;
+	margin-bottom: 10px;
 }
 .wp-sidebar-widgets {
 	height: 100%;
@@ -296,7 +316,7 @@ aside.left .tagline {
 	text-align: center;
 	position: fixed;
 	left: 0;
-	z-index: 99;
+	z-index: 50;
 }
 aside.left #menu-main {
 	padding: 0 0 20px 10px;
@@ -347,16 +367,51 @@ aside.right .widget-title {
 */
 
 .top-content {
-	background: #0D0D0D;
+	background: rgba(13,13,13,0.7);
 	padding-top: 10px;
 	padding-left: 0;
 	padding-right: 0;
 	border-bottom: 2px #fff solid;
 	border-top: 2px #fff solid;
 }
-.lb_thumb{
+.top-content .text .middle {
+	margin-top: 30px;
+}
+.top-content .text .view, .top-content .text .goto{
+	position: relative;
+	color: #fff;
+	text-align: center;
+	font-size: 1.1em;
+	border: 3px #444 solid;
+	background: #00A100;
+	padding: 10px 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5px;
+	width: 50%;
+}
+.top-content .text .view:hover, .top-content .text .goto:hover{ 
+	background: #00C700;
+}
+.top-img {
 	cursor:pointer;
 }
+.top-img .text {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+}
+.lb_thumb {
+	cursor:pointer;
+}
+.lb_thumb img:hover{
+	width: 220px;
+	height: 220px;
+}
+
 
 /*
 *
@@ -407,7 +462,7 @@ aside.right .widget-title {
 */
 
 footer {
-	background: black;
+	background: rgba(0,0,0,0.8);
 	color: #fff;
 	padding-top: 5px;
 	text-align: center;
@@ -433,28 +488,33 @@ footer {
 .blog-bg {
 	background-color: #fff;
 	color: #111;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .blog-content {
-	font-family: Helvetica,Arial,sans-serif;
-	font-size: 1em;
-	font-weight: 300;
+	font-size: 1.2em;
 }
 .blog-contain {
 	margin-bottom: 70px;
 }
 .blog-page .blog-contain .title a {
 	color: #222;
-	font-family: Helvetica,Arial,sans-serif;
 	font-weight: 700;
 }
 .blog-contain .title a {
 	color: #fff;
 }
 .blog-info {
-	font-size: .8em;
+	font-style: italic;
+	margin-top: 10px;
+	color: #9ba09c;
+	font-weight: bold;
 }
 .blog-page .blog-info a {
-	color: #000;
+	color: #004000;
 	text-decoration: underline;
 }
 .blog-info a {
@@ -518,7 +578,7 @@ ol.commentlist .children {
 *
 */
 
-.lb_thumb {
+.lb_thumb, .top-img {
 	position: relative;
 	height: 100%;
 }
@@ -540,7 +600,7 @@ ol.commentlist .children {
 	z-index: 99;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.6);
 	text-align: center;
 }
 .lightbox img {
@@ -549,6 +609,32 @@ ol.commentlist .children {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+/*
+*
+* notifbox
+*
+*/
+
+.notifbox {
+	display: none;
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	text-align: center;
+}
+
+.notifbox .thebox {
+	margin-top: 120px;
+	width: 400px;
+	height: 300px;
+	background: #fff;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 
 /*
 *

@@ -2,6 +2,14 @@ var $=jQuery.noConflict();
  
 
 $(document).ready(function() {
+
+// =================================================
+// ================== PAGE EVENTS ==================
+// =================================================
+$('.top-content .goto').click(function () {
+  showNotfmodal("THIS IS THE ERROR!");
+});
+
  
 // =================================================
 // ====================== INIT =====================
@@ -30,7 +38,7 @@ $(document).ready(function() {
     }
   });
   $(document).on('click', function( e ) {
-    // $("header .mobile-menu-view:visible").hide();
+    // $("header .mobile-menu-view").hide();
   });
 
 
@@ -68,15 +76,44 @@ $(document).ready(function() {
   }); 
    
 
+
+// =================================================
+// ============== Top Carousel MODE ================
+// =================================================
+  $('.top-img').hover(function () {
+      $(this).find('div.text').fadeIn('fast');
+      $(this).find('div.view').show('fast');
+      $(this).find('div.goto').fadeIn(1000);
+  });
+  $('.top-img').mouseleave(function () {
+      $(this).find('div.text').fadeOut('fast');
+      $(this).find('div.view').hide();
+      $(this).find('div.goto').hide();
+  });
+
+  $('.top-img .view').click(function(e) {
+      var img_link = $(this).data('link');
+      var img_alt = $(this).data('alt');
+      if ($('.lightbox').length > 0) { // #lightbox exists
+                     //place href as img src value
+          $('.lightbox').html('<img src="' + img_link + '" alt="' + img_alt + '"/>');
+          //show lightbox window - you could use .show('fast') for a transition
+          $('.lightbox').fadeIn('fast');
+      }
+      $('.lightbox').live('click keydown', function() { 
+      $('.lightbox').fadeOut('slow');
+    });
+  });
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+        $('.lightbox').fadeOut('slow');
+    }
+  });
+
+
 // ===================================================
 // ===================== Lightbox ====================
 // ===================================================
-  $('.lb_thumb').hover(function () {
-      $(this).find('div.text').fadeIn('fast');
-  });
-  $('.lb_thumb').mouseleave(function () {
-      $(this).find('div.text').fadeOut('fast');
-  });
   $('.lb_thumb').click(function(e) {
       var img_link = $(this).find('img').data('link');
       var img_alt = $(this).find('img').attr('alt');
@@ -96,7 +133,26 @@ $(document).ready(function() {
     }
   });
 
-
+// ===================================================
+// ==================== Notif Box ====================
+// ===================================================
+ function showNotfmodal(msg) {
+      
+      if ($('.notifbox').length > 0) { // #notifbox exists
+                     //place href as img src value
+          $('.notifbox').html('<div class="thebox">' + msg + '</div>');
+          //show notifbox window - you could use .show('fast') for a transition
+          $('.notifbox').fadeIn('fast');
+      }
+      $('.notifbox').live('click keydown', function() { 
+      $('.notifbox').fadeOut('slow');
+    });
+  }
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+        $('.notifbox').fadeOut('slow');
+    }
+  });
 
 
 // ===================================================
@@ -208,3 +264,20 @@ function validateForm() {
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=758749107492947";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

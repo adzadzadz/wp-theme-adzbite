@@ -17,9 +17,12 @@ $options = get_option('theme_options');
 	<meta property="fb:app_id" content="272663612872931"/>
 	<title><?php echo get_bloginfo( 'name' ); ?><?php wp_title( ' &raquo; ', true, 'left' ); ?></title>
 	<?php wp_head(); ?>
+
 </head>
 <body>
 <div id="fb-root"></div>
+<div class="lightbox"></div>
+<div class="notifbox"></div>
 <header class="col-lg-12 col-sm-12 col-xs-12">
 	<nav class="mini">
 		<div class="brand col-lg-2 col-md-2 col-sm-3 col-xs-12">
