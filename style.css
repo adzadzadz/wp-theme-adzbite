@@ -275,6 +275,9 @@ header .mobile-menu-view li .sub-menu a:hover{
 	background-color: #121212;
 	margin-bottom: 10px;
 }
+.widget-title a:link, .widget-title a:hover, .widget-title a:visited {
+	color: #fff;
+}
 .wp-sidebar-widgets {
 	height: 100%;
 	padding-left: 0px;
@@ -284,6 +287,10 @@ header .mobile-menu-view li .sub-menu a:hover{
 }
 #sidebar ul {
 	padding-left: 45px;
+}
+#sidebar iframe {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 #sidebar ul li {
 	list-style: none;
@@ -631,6 +638,7 @@ ol.commentlist .children {
 	text-align: center;
 }
 .lightbox-popup img {
+	margin-top: 40px;
 	max-width: 90%;
 	max-height: 90%;
 	margin-right: auto;
@@ -670,6 +678,7 @@ ol.commentlist .children {
 }
 .notifbox .close-btn:hover {
 	background: #999;
+	cursor: pointer;
 }
 
 /*

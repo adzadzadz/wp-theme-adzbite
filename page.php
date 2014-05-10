@@ -24,8 +24,6 @@
 				<br>
 				<div class="home-content">
 
-				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
-
 				<?php the_content(); ?>
 					
 				</div>

@@ -52,15 +52,31 @@ function light_bg_shortcode2($atts, $content = null)
 /** =============== Lightbox =================*/
 
 add_shortcode('lightbox','lightbox');
-// Example: [lightbox class="wp_featured" img="" alt="" img_link="#" img_attr="" height="" width=""]
+// Example: [lightbox cols="5" class="" img="" alt="" img_link="#" img_attr=""]
 function lightbox($atts, $content = null)
 {
-	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'cols' => 1),$atts));
+	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'cols' => 12),$atts));
 
 	$output = '';
-	$output .= '<div style="padding-left:0;" class="lb-pop col-xs-' . $cols . '"><a class="thumbnail" style="margin-bottom: 0px;">';
+	$output .= '<div style="padding-left:0;" class="lb-pop col-md-' . $cols . '"><a class="thumbnail" style="margin-bottom: 0px;">';
 	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '" height="' . $height . '" width="' . $width . '"' . $img_attr . '>';
 	$output .= '</a></div>';
+
+	return $output;
+}
+
+/** =============== button =================*/
+
+add_shortcode('button','button');
+// Example:  [button link="http://greatlife.adzbite.com" class="btn-primary btn-lg" value="Demo"]
+function button($atts, $content = null)
+{
+	extract(shortcode_atts(array('class' => '', 'value' => 'Submit', 'link' => '#'),$atts));
+
+	$output = '';
+	$output .= '<a style="color: #fff;" class="btn ' . $class . '" href="'. $link . '" target="_blank">';
+	$output .= $value;
+	$output .= '</a>';
 
 	return $output;
 }
@@ -80,7 +96,7 @@ function contact_form($atts, $content = null)
 	$output .= '<div class="form-group"><label for="email" id="label_email">Email: </label><input class="form-control" type="text" id="email" name="email" placeholder="bubbles@powerpuffgirls.org"><div class="alert-email alert alert-danger"></div></div>';
 	$output .= '<div class="form-group"><label for="website" id="label_website">Website:</label><input class="form-control" type="text" name="website" id="website" placeholder="www.adzbite.com"><div class="alert-website alert alert-danger"></div></div>';
 	$output .= '<div class="form-group"><label for="message" id="label_message">Message: </label><textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Dude, just right something. I don\'t want to be lonely."></textarea><div class="alert-message alert alert-danger"></div></div></form>';
-	$output .= '<div class="result" style="display:hidden;"></div><button class="btn btn-success adzbite-contact-button">' . $button . '</button></div></div>';
+	$output .= '<div class="result" style="display:hidden;"></div><button class="btn btn-primary adzbite-contact-button">' . $button . '</button></div></div>';
 
 	return $output;
 }

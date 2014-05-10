@@ -1,11 +1,5 @@
 var $=jQuery.noConflict();
 
-$(document).ready(function() {
-
-    //=========================================================
-    //========================= Login =========================
-    //=========================================================
-
     // Ajax Request Sample
     // $.ajax({
     //     url: ajax_object.ajax_url,
@@ -22,7 +16,19 @@ $(document).ready(function() {
     //         console.log(errorThrown);
     //     }
     // });
-    
+
+$(document).ready(function() {
+
+    //=========================================================
+    //========================= Login =========================
+    //=========================================================
+
+    $('span.close-btn').click(function () {
+        alert("WORKS");
+        $('.notifbox').fadeOut('slow');
+        $('.thebox').slideUp();
+    });
+
     $("#btn-login").click(function () {
 
         $.ajax({

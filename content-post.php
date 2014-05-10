@@ -58,7 +58,7 @@
 			<br />
 			<div class="horizontal-wall"></div>
 			<div class="author-img">
-				<h3><b>Authored by:</b></h3>&nbsp;<span class="img"><?=  get_avatar( get_the_author_meta( 'ID' ), 32 ) ?></span>  <span class="info"><a href="<?php echo get_page_link(13);?>"> <?php the_author(); ?></a></span><br>
+				<h3><b>Written by:</b></h3>&nbsp;<span class="img"><?=  get_avatar( get_the_author_meta( 'ID' ), 32 ) ?></span>  <span class="info"><a href="<?php echo get_page_link(13);?>"> <?php the_author(); ?></a></span><br>
 			</div>
 		
 			<p class="wp_tags"><small><?php the_tags(); ?></small></p>

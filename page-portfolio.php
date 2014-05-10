@@ -65,8 +65,9 @@ $my_query = new WP_Query($args);
 							<div class="col-xs-8">
 
 								<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-								<span class="title">Date Added:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
+								&nbsp;
 								<?php the_excerpt(); ?>
+								&nbsp;
 								<div class="blog-continue_reading">
 									<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Open Project</a>
 								</div>

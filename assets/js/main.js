@@ -83,13 +83,13 @@ $('.top-content .goto').click(function () {
 // =================================================
   $('.top-img').hover(function () {
       $(this).find('div.text').fadeIn('fast');
-      $(this).find('div.view').show('fast');
-      $(this).find('div.goto').fadeIn(1000);
+      $(this).find('div.view').slideDown('fast');
+      $(this).find('div.goto').fadeIn('slow');
   });
   $('.top-img').mouseleave(function () {
-      $(this).find('div.text').fadeOut('fast');
-      $(this).find('div.view').hide();
-      $(this).find('div.goto').hide();
+      $(this).find('div.text').fadeOut();
+      $(this).find('div.view').slideUp();
+      $(this).find('div.goto').fadeOut();
   });
 
   $('.top-img .view').click(function(e) {
@@ -142,20 +142,19 @@ $('.top-content .goto').click(function () {
         $('.notifbox').show();
         $('.thebox').slideDown();
     }
-
-    $('.notifbox').live('click keydown', function() { 
-      $('.notifbox').fadeOut('slow');
-      $('.thebox').slideUp();
-    });
-    
   }
-  
+ 
+  $('.close-btn').live('click keydown', function() { 
+    $('.notifbox').fadeOut('slow');
+    $('.thebox').slideUp();
+  });  
 
 
   $(document).keydown(function(e) {
     if (e.keyCode == 27) {
         $('.lightbox-popup').fadeOut('slow');
         $('.notifbox').fadeOut('slow');
+        $('.thebox').slideUp();
     }
   });
 
