@@ -11,6 +11,7 @@ require_once 'inc/shortcodes.php';
 require_once 'inc/theme-options.php';
 require_once 'inc/post-types.php';
 require_once 'inc/breadcrumb.php';
+require_once 'inc/login.php';
 
 /**
  * Theme Supports
@@ -48,12 +49,14 @@ function adzbite_init() {
 	wp_enqueue_style( 'adzbitecss', get_template_directory_uri() . '/assets/css/extra.css' );
 	wp_register_script( 'bootstrap3js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js' );
 	wp_register_script( 'owl_carousel_js', get_template_directory_uri() . '/assets/owl_carousel/owl.carousel.js' );
+	wp_register_script( 'ajaxjs', get_template_directory_uri() . '/assets/js/ajax.js' );
 	wp_register_script( 'adzbitejs', get_template_directory_uri() . '/assets/js/main.js' );
+	wp_localize_script( 'ajaxjs', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap3js' );
 	wp_enqueue_script( 'owl_carousel_js' );
+	wp_enqueue_script( 'ajaxjs' );
 	wp_enqueue_script( 'adzbitejs' );
-
 }
 
 add_action( 'wp_enqueue_scripts', 'adzbite_init' );

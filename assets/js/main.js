@@ -1,6 +1,3 @@
-var $=jQuery.noConflict();
- 
-
 $(document).ready(function() {
 
 // =================================================
@@ -98,37 +95,37 @@ $('.top-content .goto').click(function () {
   $('.top-img .view').click(function(e) {
       var img_link = $(this).data('link');
       var img_alt = $(this).data('alt');
-      if ($('.lightbox').length > 0) { // #lightbox exists
+      if ($('.lightbox-popup').length > 0) { // #lightbox-popup exists
                      //place href as img src value
-          $('.lightbox').html('<img src="' + img_link + '" alt="' + img_alt + '"/>');
-          //show lightbox window - you could use .show('fast') for a transition
-          $('.lightbox').fadeIn('fast');
+          $('.lightbox-popup').html('<img src="' + img_link + '" alt="' + img_alt + '"/>');
+          //show lightbox-popup window - you could use .show('fast') for a transition
+          $('.lightbox-popup').fadeIn('fast');
       }
-      $('.lightbox').live('click keydown', function() { 
-      $('.lightbox').fadeOut('slow');
+      $('.lightbox-popup').live('click keydown', function() { 
+      $('.lightbox-popup').fadeOut('slow');
     });
   });
   $(document).keydown(function(e) {
     if (e.keyCode == 27) {
-        $('.lightbox').fadeOut('slow');
+        $('.lightbox-popup').fadeOut('slow');
     }
   });
 
 
 // ===================================================
-// ===================== Lightbox ====================
+// ================= Lightbox-popup ==================
 // ===================================================
-  $('.lb_thumb').click(function(e) {
+  $('.lb-pop').click(function(e) {
     var img_link = $(this).find('img').data('link');
     var img_alt = $(this).find('img').attr('alt');
-    if ($('.lightbox').length > 0) { // #lightbox exists
+    if ($('.lightbox-popup').length > 0) { // #lightbox-popup exists
                    //place href as img src value
-        $('.lightbox').html('<img src="' + img_link + '" alt="' + img_alt + '"/>');
-        //show lightbox window - you could use .show('fast') for a transition
-        $('.lightbox').fadeIn('fast');
+        $('.lightbox-popup').html('<img src="' + img_link + '" alt="' + img_alt + '"/>');
+        //show lightbox-popup window - you could use .show('fast') for a transition
+        $('.lightbox-popup').fadeIn('fast');
     }
-    $('.lightbox').live('click keydown', function() { 
-      $('.lightbox').fadeOut('slow');
+    $('.lightbox-popup').live('click keydown', function() { 
+      $('.lightbox-popup').fadeOut('slow');
     });
   });
 
@@ -140,19 +137,24 @@ $('.top-content .goto').click(function () {
       
     if ($('.notifbox').length > 0) { // #notifbox exists
                    //place href as img src value
-        $('.notifbox').html('<div class="thebox"><span class="glyphicon glyphicon-remove close-btn"></span><h2>' + title + '</h2><hr><p>' + message + '</p></div>');
+        $('.thebox').html('<span class="glyphicon glyphicon-remove close-btn"></span><h2>' + title + '</h2><hr><p>' + message + '</p>');
         //show notifbox window - you could use .show('fast') for a transition
-        $('.notifbox').fadeIn('fast');
+        $('.notifbox').show();
+        $('.thebox').slideDown();
     }
+
     $('.notifbox').live('click keydown', function() { 
       $('.notifbox').fadeOut('slow');
+      $('.thebox').slideUp();
     });
+    
   }
+  
 
 
   $(document).keydown(function(e) {
     if (e.keyCode == 27) {
-        $('.lightbox').fadeOut('slow');
+        $('.lightbox-popup').fadeOut('slow');
         $('.notifbox').fadeOut('slow');
     }
   });

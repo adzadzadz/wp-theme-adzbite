@@ -20,8 +20,8 @@ $options = get_option('theme_options');
 					<div class="text">
 						 <!-- <img src="<?php echo get_template_directory_uri() . '/assets/imgs/magnify.png';?>" alt="Magnify">  -->
 						 <div class="middle">
-							<div class="view" style="display:none;" data-src="<?= $options['top_carousel_' . $x]?>" data-link="<?= $options['top_carousel_link_' . $x]?>" data-alt="<?= $options['top_carousel_alt_' . $x]?>">View</div>
-							<div class="goto" style="display:none;">Go to Page</div>
+							<div class="view" style="display:none;" data-src="<?= $options['top_carousel_' . $x]?>" data-link="<?= $options['top_carousel_link_' . $x]?>" data-alt="<?= $options['top_carousel_alt_' . $x]?>">View &nbsp;</div>
+							<div class="goto" style="display:none;">Go to Page &nbsp;</div>
 						</div>
 					</div>
 				</div>

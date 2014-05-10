@@ -23,15 +23,10 @@
 					<div class="col-md-3 col-sm-12 page_title"><h2><?php the_title(); ?></h2></div>
 					<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
 				</div>
-
+				<br>
+				<br>
 				<div class="home-content">
 				
-				<div class="wp_featured col-xs-12">
-					
-					<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
-
-				</div>
-
 				<?php the_content(); ?>
 				<br>
 				<br>

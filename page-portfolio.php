@@ -37,7 +37,8 @@ $my_query = new WP_Query($args);
 					<div class="col-md-3 col-sm-12 page_title"><h2><?php the_title(); ?></h2></div>
 					<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
 				</div>
-
+				<br>
+				<br>
 				<div class="home-content">
 
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>

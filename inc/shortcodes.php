@@ -52,15 +52,15 @@ function light_bg_shortcode2($atts, $content = null)
 /** =============== Lightbox =================*/
 
 add_shortcode('lightbox','lightbox');
-
+// Example: [lightbox class="wp_featured" img="" alt="" img_link="#" img_attr="" height="" width=""]
 function lightbox($atts, $content = null)
 {
-	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'height' => '100%', 'width' => "100%"),$atts));
+	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'cols' => 1),$atts));
 
 	$output = '';
-	$output .= '<div class="lb_thumb" style="height:' . $height . '; width:' . $width . ';">';
+	$output .= '<div style="padding-left:0;" class="lb-pop col-xs-' . $cols . '"><a class="thumbnail" style="margin-bottom: 0px;">';
 	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '" height="' . $height . '" width="' . $width . '"' . $img_attr . '>';
-	$output .= '</div>';
+	$output .= '</a></div>';
 
 	return $output;
 }

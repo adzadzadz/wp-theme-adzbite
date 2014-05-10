@@ -16,6 +16,11 @@
         <section class="center-content col-lg-7 col-md-7 col-sm-9">
             <div class="page_title_bg"><h2 class="page_title">ERROR!</h2></div>
             <div class="home-content">
+                <div class="page_title_bg">
+                    <div class="col-md-3 col-sm-12 page_title"><h2><?php the_title(); ?></h2></div>
+                    <div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
+                </div>
+                
                 <div class="jumbotron" style="color: #333333;">
                     <h1>404 Page Not Found</h1>
                     <p>...</p>

@@ -20,11 +20,12 @@ if (isset($_POST['message'])) {
 	if(trim($_POST['message']) != "") {
 			$message = $_POST['message'];
 			// $to = get_bloginfo( 'admin_email' );
-			$to = 'storytellercontact2@gmail.com';
+			$to = 'adzbite@gmail.com';
 			$subject = 'Adzbite Contact Form';
-			$headers = 'Name: ' . $name . ' \n Email: ' . $email . '\n Website: ' . $website;
+			$headers = '\n\n\n Name: ' . $name . ' \n Email: ' . $email . '\n Website: ' . $website;
 
-		mail( $to, $subject, $message, $headers);
+
+		mail( $to, $subject, $message . $headers);
 		echo '<div class="alert alert-success"><strong>Sent!</strong> You will get a response within 12 hours.</div>';
 		exit;
 	}

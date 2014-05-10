@@ -21,8 +21,8 @@ $options = get_option('theme_options');
 </head>
 <body>
 <div id="fb-root"></div>
-<div class="lightbox"></div>
-<div class="notifbox"></div>
+<div class="lightbox-popup"></div>
+<div class="notifbox"><div class="thebox"></div></div>
 <header class="col-lg-12 col-sm-12 col-xs-12">
 	<nav class="mini">
 		<div class="brand col-lg-2 col-md-2 col-sm-3 col-xs-12">
@@ -40,8 +40,8 @@ $options = get_option('theme_options');
 					<li><a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 					<?php }
 					else{ ?>
-					<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
-					<li><a href="<?= wp_login_url(); ?>" title="Login">Login</a></li>
+					<li><a id="btn-register" href="#">Register</a></li>
+					<li><a id="btn-login" href="#" title="Login">Login</a></li>
 					<?php } ?>
 				
 			<?php wp_nav_menu( array('theme_location' => 'top_menu_right', 'items_wrap' => '%3$s', )); ?>
@@ -58,7 +58,7 @@ $options = get_option('theme_options');
 					<?php }
 					else{ ?>
 					<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
-					<li><a href="<?= wp_login_url(); ?>" title="Login">Login</a></li>
+					<li><a id="btn-login" href="<?= wp_login_url(); ?>" title="Login">Login</a></li>
 				<?php } ?>
 			</ul>
 		</div>
