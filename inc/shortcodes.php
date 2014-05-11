@@ -1,18 +1,21 @@
 <?php
 
 
-/** =============== Title ==================*/
+/** =============== Page Title =================*/
 
-add_shortcode('title','title_shortcode');
-
-function title_shortcode($atts, $content = null)
+add_shortcode('title','page_title');
+// Example:  [title value="Collection" sub="LoL"]
+function page_title($atts, $content = null)
 {
-	extract(shortcode_atts(array('class' => ''),$atts));
+	extract(shortcode_atts(array('class' => '', 'value' => '', 'sub' => '&nbsp;'),$atts));
 
 	$output = '';
-	$output .= '<h4 class="title '.$class.'">';
-	$output .= do_shortcode($content);
-	$output .= '</h4>';
+	$output .= '<div class="page_title_bg2 row ' . $class . '">';
+	$output .= '<h2 style="color: #fff;">';
+	$output .= '<div class="col-md-5 col-sm-12 page_title2"><b>' . $value . '</b></div>';
+	$output .= '<div class="col-md-7 col-sm-12 page_title_right2"><small>' . $sub . '</small></div>';
+	$output .= '</h2>';
+	$output .= '</div><br>';
 
 	return $output;
 }
@@ -100,5 +103,33 @@ function contact_form($atts, $content = null)
 
 	return $output;
 }
+
+/** =============== Featured Work =================*/
+
+add_shortcode('work_img','featuredWork');
+// Example:  [work_img link="http://greatlife.adzbite.com" class="none" main_img="http://www.adzbite.com/wp-content/uploads/2014/05/depressed-200x200.jpg" hover_img="http://www.adzbite.com/wp-content/uploads/2014/04/featured-200x200.png"][/work_img]
+function featuredWork($atts, $content = null)
+{
+	extract(shortcode_atts(array('class' => '', 'main_img' => '', 'hover_img' => '', 'link' => '#', 'alt' => 'main image'),$atts));
+
+	$output = '';
+	$output .= '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">';
+	$output .= '<div class="page-thumbnail desc">';
+	$output .= '<a href="' . $link . '">';
+	$output .= '<div class="wrap-thumbnail img-circle">';
+	$output .= '<img src="' . $main_img . '" alt="' . $alt . '" class="main">';
+	$output .= '<img src="' . $hover_img . '" alt="' . $alt . '" class="hover">';
+	$output .= '</div>';
+	$output .= '</a>';
+	$output .= '<div class="caption">';
+	$output .= do_shortcode($content);
+	$output .= '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+	
+	return $output;
+}
+
+?>
 
 

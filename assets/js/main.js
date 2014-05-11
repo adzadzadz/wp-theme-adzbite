@@ -11,11 +11,19 @@ $('.top-content .goto').click(function () {
   showNotifmodal(title, message);
 });
 
+$('.wrap-thumbnail').hover(function () {
+  $(this).find('img.main').css({"height":"25%","width":"100%"});
+  $(this).find('img.hover').css({"height":"75%","width":"100%"});
+});
+$('.wrap-thumbnail').mouseleave(function () {
+  $(this).find('img.main').css({"height":"100%","width":"100%"});
+  $(this).find('img.hover').css({"height":"0%","width":"100%"});
+});
  
 // =================================================
 // ====================== INIT =====================
 // =================================================
-
+  
   $('header li').hover(function () {
     if ($(this).find('ul.sub-menu') != undefined) {
       $(this).find('ul.sub-menu').show();
@@ -24,7 +32,6 @@ $('.top-content .goto').click(function () {
       $(this).find('ul.sub-menu').hide();
     })
   });
-
 
 // =================================================
 // ================== Mobile Menu ==================

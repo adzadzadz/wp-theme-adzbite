@@ -136,6 +136,25 @@ a:hover {
 	color: #000;
 	text-decoration: underline;
 }
+
+/*
+ *
+ * HOME
+ *
+ */
+
+.home-bg {
+	background: rgba(0,0,0,0.5);
+	color: #ccc;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 1.2em;
+}
+.home-content {
+	padding: 0px 0px 15px;
+	margin: 0 25px;
+}
+
 /*
  *
  * HEADER
@@ -397,7 +416,7 @@ aside.right .widget-title {
 	color: #fff;
 	text-align: center;
 	font-size: 1.1em;
-	border: 3px #444 solid;
+	border: 3px #101010 solid;
 	background: #00A100;
 	padding: 10px 10px;
 	margin-right: auto;
@@ -406,7 +425,7 @@ aside.right .widget-title {
 	width: 50%;
 }
 .top-content .text .view:hover, .top-content .text .goto:hover{ 
-	background: #00C700;
+	background: #333333;
 }
 .top-img {
 	cursor:pointer;
@@ -443,9 +462,6 @@ aside.right .widget-title {
 .center-content {
 	padding-left: 0;
 	padding-right: 0; 
-}
-.home-content {
-	padding: 0px 0px 15px;
 }
 .carousel-inner {
 	max-height: 450px;
@@ -714,6 +730,65 @@ ol.commentlist .children {
 	margin-bottom: 40px; 
 	-webkit-box-shadow: 0 1px 1px 1px #000000;
 	box-shadow: 0 1px 1px 1px #000000;
+}
+.page-thumbnail {
+	text-align: center;
+	max-width: 200px;
+}
+.wrap-thumbnail {
+	height: 200px;
+	max-width: 200px;
+	position: relative;
+	overflow: hidden;
+	/*border: 5px #666 solid;*/
+}
+.page-thumbnail img.main {
+	height: 100%;
+	width: 100%;
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.page-thumbnail img.hover {
+	height: 0px;
+	width: 100%;
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.page_title_bg2 {
+	text-align: center;
+}
+.page_title2 {
+	border-bottom: 2px #aaa solid;
+}
+.page_title_right2 {
+	height: 100%;
+	border-bottom: 2px green solid;
+}
+.mosaic .block {
+	padding: 0px 0px 0px 0px;
+}
+.mosaic .wrap {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	margin: 0 5px 5px 0;
+}
+.mosaic img {
+	width: 100%;
+/*  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;*/
+}
+.mosaic img:hover {
+	/*width: 120%;*/
 }
 
 /*

@@ -21,12 +21,9 @@
 				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
 			</div>
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
-				
-				<div class="home-content">
 
 				<?php get_template_part('content','post'); ?>
-				
-				</div>
+
 				<?php endwhile; else: ?>
 
 				<h4>No content to display.</h4>
