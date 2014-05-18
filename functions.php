@@ -11,7 +11,7 @@ require_once 'inc/shortcodes.php';
 require_once 'inc/theme-options.php';
 require_once 'inc/post-types.php';
 require_once 'inc/breadcrumb.php';
-require_once 'inc/login.php';
+require_once 'inc/ajax.php';
 
 /**
  * Theme Supports
@@ -23,9 +23,7 @@ add_theme_support( 'post-thumbnails' );
 //Register Theme Menu
 register_nav_menus( array(
 	'top_menu_left' => 'Top Header Left Menu',
-	'top_menu_right' => 'Top Header Right Menu',
 	'side_menu' => 'Side Main Menu',
-	'footer_menu' => 'My Custom Footer Menu',
 ) );
 
 add_filter( 'avatar_defaults', 'custom_avatar' );
@@ -55,8 +53,8 @@ function adzbite_init() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap3js' );
 	wp_enqueue_script( 'owl_carousel_js' );
-	wp_enqueue_script( 'ajaxjs' );
 	wp_enqueue_script( 'adzbitejs' );
+	wp_enqueue_script( 'ajaxjs' );
 }
 
 add_action( 'wp_enqueue_scripts', 'adzbite_init' );
@@ -69,8 +67,8 @@ function left_sidebar() {
 	register_sidebars(1, array(
 		'name' => 'Left Sidebar',
 		'id' => 'left_sidebar',
-		'before_widget' => '',
-		'after_widget' => '',
+		'before_widget' => '<div class="left-sidebar-widget"><div class="first-child">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
@@ -78,8 +76,43 @@ function left_sidebar() {
 	register_sidebars(1, array(
 		'name' => 'Right Sidebar',
 		'id' => 'right_sidebar',
-		'before_widget' => '',
-		'after_widget' => '',
+		'before_widget' => '<div class="right-sidebar-widget"><div class="first-child">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebars(1, array(
+		'name' => 'Footer 1',
+		'id' => 'footer1',
+		'before_widget' => '<div class="footer-widget footer1">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebars(1, array(
+		'name' => 'Footer 2',
+		'id' => 'footer2',
+		'before_widget' => '<div class="footer-widget footer2">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebars(1, array(
+		'name' => 'Footer 3',
+		'id' => 'footer3',
+		'before_widget' => '<div class="footer-widget footer3">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+	register_sidebars(1, array(
+		'name' => 'Footer 4',
+		'id' => 'footer4',
+		'before_widget' => '<div class="footer-widget footer4">',
+		'after_widget' => '</div>',
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
@@ -87,5 +120,10 @@ function left_sidebar() {
 add_action( 'widgets_init', 'left_sidebar' );
 
 
-
-
+// EXCERPT STUFF
+function limit_string_lenght($string = "", $limit = NULL) {
+ $limit = $limit - 1;
+ $exerpt = substr($string, 0, $limit);
+ $exerpt .= "...";
+ return $exerpt;
+}

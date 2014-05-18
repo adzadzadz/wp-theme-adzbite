@@ -16,8 +16,8 @@ $options = get_option('theme_options');
 <div id="page-content">
 	<?php get_sidebar( 'left' ); ?>
 	<?php get_template_part( 'content', 'top' ); ?> 
-	<div class="gray">
-		<section class="center-content col-lg-7 col-md-7 col-sm-9">
+	<section class="center-content col-lg-7 col-md-7 col-sm-9">
+		<div class="blog-bg">
 			<div id="carousel-example-generic" class="carousel slide carousel-home" data-ride="carousel">
 			<!-- Indicators -->
 				<ol class="carousel-indicators">
@@ -47,21 +47,19 @@ $options = get_option('theme_options');
 				<span class="glyphicon glyphicon-chevron-right"></span>
 				</a>
 			</div>
-			<div class="home-bg">
-				<div class="home-content">
-					<br>
-					
-					<?php if(have_posts()): while(have_posts()) : the_post(); ?>
-					<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
-					<?php the_content(); ?>
-					<?php endwhile; else: ?>
-					<h4>No content to display.</h4>
-					<?php endif ?>
-
-				</div>
+			<div class="home-content">		
+				<br>
+				
+				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
+				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
+				<?php the_content(); ?>
+				<?php endwhile; else: ?>
+				<h4>No content to display.</h4>
+				<?php endif ?>
+				<hr>
 			</div>
-		</section>
-		<?php get_sidebar( 'right' ); ?>
-	</div>
+		</div>
+	</section>
+	<?php get_sidebar( 'right' ); ?>
 </div>
 <?php get_footer(); ?>

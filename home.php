@@ -18,20 +18,25 @@
 				<div class="col-md-3 col-sm-12 page_title"><h2>Articles</h2></div>
 				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
 			</div>
-			<br>
-			<br>
-				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
+			
+			<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
+			<div class="blog-bg">		
+				<br>
+				<br>
 				<div class="home-content">
 
-				<?php get_template_part('content','post'); ?>
+					<?php get_template_part('content','post'); ?>
 					
 				</div>
-				<?php endwhile; else: ?>
+			</div>
+			<br>
+			<?php endwhile; else: ?>
 
-				<h4>No content to display.</h4>
+			<h4>No content to display.</h4>
 
-				<?php endif ?>
+			<?php endif ?>
+				
 		</section>
 		<?php get_sidebar( 'right' ); ?>
 	</div>

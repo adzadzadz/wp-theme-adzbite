@@ -55,3 +55,43 @@ function adzbite_register_form() {
     die();
 }
 
+// Mailer
+
+add_action( 'wp_ajax_nopriv_contact_message', 'contact_message' );
+
+function contact_message() {
+
+	if(isset($_POST['name']) and isset($_POST['email'])){
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		if (isset($_POST['website'])) {
+			$website = $_POST['website'];
+		}
+		else {
+			$website = 'NONE!';
+		}
+	}
+	if (isset($_POST['message'])) {
+		if(trim($_POST['message']) != "") {
+				$message = $_POST['message'];
+				// $to = get_bloginfo( 'admin_email' );
+				$to = get_bloginfo('admin_email');
+				$subject = 'Adzbite Contact Form';
+				$headers = '<br><br><br>Name: ' . $name;
+				$headers .= '<br>Email: ' . $email;
+				$headers .= '<br>Website: ' . $website;
+				
+
+			wp_mail( $to, $subject, $message . $headers );
+			echo '<div class="alert alert-success"><strong>Sent!</strong> You will get a response within 12 hours.</div>';
+			die();
+		}
+		else {
+			echo '<div class="alert alert-danger"><strong>Something is wrong!</strong> There is no message to send.</div>';
+			die();
+		}
+	}
+
+    die();
+}
+
