@@ -29,7 +29,7 @@
 				<h4>No content to display.</h4>
 
 				<?php endif ?>
-		</div>
+			</div>
 
 		</section>
 		<?php get_sidebar( 'right' ); ?>

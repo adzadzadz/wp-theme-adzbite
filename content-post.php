@@ -11,41 +11,41 @@
 <div class="blog-contain">
 
 	<?php if(!is_single()) : ?>
-		<div class="row article-exerpt-wrap">
-			<?php if ( has_post_thumbnail() ) {?>
-				<div class="col-xs-12 col-sm-4 col-md-4" style="text-align: center;">
-					<a href="<?= get_permalink(); ?>" class="img-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></a>
+		<div class="row article-summary-wrap">
+			<div class="row home-content blog-list">
+				<div class="blog-info col-md-12 col-lg-12">
+						<!-- <span class="title">By:</span> <span class="info"><?php the_author(); ?></span>, -->
+						<span class="title"><i class="fa fa-child"></i></span>
+						<span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>,
+						<span class="title">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
 				</div>
-				<div class="col-xs-12 col-sm-8 col-md-8">
-					<h3 class="title"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
-					<div class="blog-info">
-							<span class="title">By:</span> <span class="info"><?php the_author(); ?></span>,
-							<!-- <span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>, -->
-							<span class="title">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
-					</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-lg-12 home-content">
+					<h3 class="title"><b><i class="fa fa-university"></i>&nbsp;<a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="text-align: center;">
+					<a href="<?= get_permalink(); ?>" class="post-thumb img-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></a>
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 					<div class="excerpt">
 						<?php the_excerpt(); ?>
-						<div class="blog-continue_reading">
-							<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Continue Reading &#8594;</a>
-						</div>
 					</div>
 				</div>
-			<?php } else {?>
-				<div class="col-xs-12">
-					<h3 class="title"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
-					<div class="blog-info">
-							<span class="title">By:</span> <span class="info"><?php the_author(); ?></span>,
-							<span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>,
-							<span class="title">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
-					</div>
-					<div class="excerpt">
-						<?php the_excerpt(); ?>
-						<div class="blog-continue_reading">
-							<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Continue Reading</a>
-						</div>
-					</div>
+			</div>
+			<hr>
+			<div class="row home-content blog-list">
+				<div class="blog-continue_reading col-lg-4 col-md-4">
+					<a href="<?php the_permalink();?>" class="cat_continue"><i class="fa fa-share"></i> Continue Reading</a>
 				</div>
-			<?php } ?>
+				<div class="blog-info col-lg-4 col-md-4">
+					<span class="title"><i class="fa fa-reddit"></i></span>
+					<span class="title">Article Posted by</span> <span class="info"><?php the_author(); ?></span>
+				</div>
+			</div>
 		</div>
 	<?php else: ?>
 		<div class="blog-info-single">

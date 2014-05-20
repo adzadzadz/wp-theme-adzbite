@@ -39,6 +39,7 @@ return $avatar_defaults;
  * Initialize styles and script dependencies
  */
 function adzbite_init() {
+	wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'bootstrap3', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'owl_carousel_css', get_template_directory_uri() . '/assets/owl_carousel/owl.carousel.css' );
 	wp_enqueue_style( 'owl_theme', get_template_directory_uri() . '/assets/owl_carousel/owl.theme.css' );
@@ -78,8 +79,8 @@ function left_sidebar() {
 		'id' => 'right_sidebar',
 		'before_widget' => '<div class="right-sidebar-widget"><div class="first-child">',
 		'after_widget' => '</div></div>',
-		'before_title' => '<h2 class="widget-title">',
-		'after_title' => '</h2>',
+		'before_title' => '<div class="widget-title-wrap"><div class="before-widget-title"></div><h2 class="widget-title">',
+		'after_title' => '</h2></div>',
 	) );
 
 	register_sidebars(1, array(

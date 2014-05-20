@@ -163,8 +163,8 @@ a:hover {
     font-size: 1.2em;
 }
 .home-content {
-	padding: 0px 0px 15px;
-	margin: 0 25px;
+	padding: 0px 0px !important;
+	margin: 0 25px !important;
 }
 
 /*
@@ -386,9 +386,6 @@ aside.left .left-wrap {
 aside.left .left-sidebar-widget {
 	padding-bottom: 10px;
 }
-aside.right #sidebar ul {
-	padding: 5px 30px;
-}
 aside.left #sidebar ul li {
 	padding: 5px 0;
 	/*border-bottom: 1px #666 solid;*/
@@ -452,6 +449,9 @@ aside.right {
 	font-size: 1em;
 	font-weight: 300;
 }
+aside.right #sidebar ul {
+	padding: 5px 30px;
+}
 aside.right .post-stats{
 	font-weight: 300;
 	font-size: 0.9em;
@@ -484,11 +484,22 @@ aside.right #sidebar ul li {
 	padding: 5px 0;
 	border-bottom: 1px #aaa solid;
 }
+aside.right .widget-title-wrap {
+
+}
 aside.right .widget-title {
+	color: #000;
 	margin-top: 0;
-	padding: 5px 10px;
-	background-color: #007D0C;
+	padding: 5px 20px;
+	background-color: #ddd;
 	margin-bottom: 10px;
+}
+aside.right .before-widget-title {
+	display: inline;
+	width: 10px;
+	height: 29px;
+	background-color: #007D0C;
+	float: left;
 }
 .textwidget {
 	padding: 0 0 !important;
@@ -571,7 +582,7 @@ aside.right .widget-title {
 	padding-right: 0; 
 }
 .carousel-inner {
-	max-height: 450px;
+	max-height: 320px;
 }
 .carousel-caption {
 	left: 0;
@@ -665,7 +676,7 @@ footer.main .copyright-bottom {
 }
 .blog-content {
 	font-size: 1.2em;
-		margin: 0 25px;
+	margin: 0 25px;
 }
 .blog-contain {
 	color: #000;
@@ -676,9 +687,6 @@ footer.main .copyright-bottom {
 }
 .blog-contain .title a {
 	color: #000;
-}
-a.cat_continue:link, a.cat_continue:visited{
-	color: #fff;
 }
 .blog-info {
 	font-style: italic;
@@ -697,13 +705,21 @@ a.cat_continue:link, a.cat_continue:visited{
 .blog-info-single .title{
 	text-shadow: 1px 1px 5px #404040;
 }
+.blog-info a {
+	color: #333;
+	text-decoration: underline;
+}
 .blog-page .blog-info a {
 	color: #004000;
 	text-decoration: underline;
 }
-.blog-info a {
-	color: #333;
-	text-decoration: underline;
+.blog-list .blog-info a {
+	color: #037200;
+}
+.post-thumb img{
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(26,26,26,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(26,26,26,1);
+	box-shadow: 0px 0px 5px 0px rgba(26,26,26,1);
 }
 .author-info {
 	background: #ddd;
@@ -763,6 +779,10 @@ ol.commentlist .children {
 	color: #fff;
 }
 
+
+a.cat_continue {
+	color: #037200;
+}
 
 /*
 *
