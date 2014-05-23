@@ -169,6 +169,28 @@ $('.wrap-thumbnail').mouseleave(function () {
     }
   });
 
+/*===================================================================================
+  ================================== WORK SECTION ===================================
+  =================================================================================== */
+
+$('.cool-gallery-single').mouseenter(function (idx, el) {
+  $(this).find('.cool-gallery-text').css('z-index','60');
+  $(this).find('.img-wrap').css('z-index','61');
+  $(this).find('.img-wrap').animate({top: "-100px", opacity: "1"}, 300);
+  $(this).find('.cool-gallery-text').animate({top: "130px", opacity: "1"}, 300);
+  $(this).find('.cool-gallery-content').show('slow');
+
+  // $(this).find('.cool-gallery-text').slideToggle('slow');
+  $(this).mouseleave(function () {
+    $(this).find('.cool-gallery-text').css('z-index','50');
+    $(this).find('.img-wrap').css('z-index','51');
+    $(this).find('.cool-gallery-text').stop().animate({top: "0px", opacity: "0"});
+    $(this).find('.img-wrap').stop().animate({opacity: "0.7", top: "0px"}, 300);
+    $(this).find('.cool-gallery-content').stop().hide('slow');
+    
+      // $(this).find('.cool-gallery-text').slideUp('slow');
+  });
+});
 
 
 });

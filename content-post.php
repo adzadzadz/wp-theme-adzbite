@@ -13,7 +13,7 @@
 	<?php if(!is_single()) : ?>
 		<div class="row article-summary-wrap">
 			<div class="row home-content blog-list">
-				<div class="blog-info col-md-12 col-lg-12">
+				<div class="blog-info col-md-12 col-lg-12 top">
 						<!-- <span class="title">By:</span> <span class="info"><?php the_author(); ?></span>, -->
 						<span class="title"><i class="fa fa-child"></i></span>
 						<span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>,
@@ -22,7 +22,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-lg-12 home-content">
-					<h3 class="title"><b><i class="fa fa-university"></i>&nbsp;<a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
+					<h3 class="title"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
 				</div>
 			</div>
 			<hr>
@@ -41,7 +41,7 @@
 				<div class="blog-continue_reading col-lg-4 col-md-4">
 					<a href="<?php the_permalink();?>" class="cat_continue"><i class="fa fa-share"></i> Continue Reading</a>
 				</div>
-				<div class="blog-info col-lg-4 col-md-4">
+				<div class="blog-info col-lg-8 col-md-8">
 					<span class="title"><i class="fa fa-reddit"></i></span>
 					<span class="title">Article Posted by</span> <span class="info"><?php the_author(); ?></span>
 				</div>
@@ -57,7 +57,7 @@
 			<?php the_content();?>
 			<br />
 			<hr>
-			<p class="wp_tags"><small><?php the_tags(); ?></small></p>
+			<p class="wp_tags"><small><i class="fa fa-tags"></i> <?php the_tags(); ?></small></p>
 			<hr>
 			<h3><b>About the Author</b></h3>
 			<div class="author-info">
@@ -83,7 +83,9 @@
 					<div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-type="button_count"></div>
 				</div>
 			</div>
-			<div class="fb-comments" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-numposts="50" data-colorscheme="light" data-width="550px"></div>
+			<hr>
+			<?php comments_template(); ?>
+			<!-- <div class="fb-comments" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-numposts="50" data-colorscheme="light" data-width="550px"></div> -->
 		</div>
 	<?php endif ?>
 	</div>

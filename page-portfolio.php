@@ -8,6 +8,10 @@
 	 *
 	 */
 
+	$default_attr = array(
+		'class'	=> "cool-gallery-img",
+	);
+
 ?>
 
 <?php 
@@ -39,50 +43,72 @@ $my_query = new WP_Query($args);
 			</div>
 			
 			<?php if(have_posts()): while(have_posts()) : the_post(); ?>
-
-			<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
 			
+			<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
+				
 			<?php the_content(); ?>
 
 			<?php endwhile; ?>
 
 			<?php endif ?>
-			
+			<div class="work-bg">
 			<?php if( $my_query->have_posts() ) {
 				
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>
-					<div class="blog-bg">
+						<?php if ( has_post_thumbnail() ) {?>
+							
+							<div class="cool-gallery-single col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="img-wrap">
+									<a href="<?php the_permalink();?>"><?php if ( has_post_thumbnail() ) {the_post_thumbnail( 'medium', $default_attr );} ?></a>
+								</div>
+								<div class="cool-gallery-text">
+									<div class="cool-gallery-content">
+										<h4><b><?php the_title();?></b></h4>
+										<hr>
+										<p><small><?php the_excerpt(); ?></small></p>
+									</div>
+								</div>
+							</div>
+
+						<?php } ?>
+					
+					<!-- <div class="blog-bg">
 						<div class="home-content">
 							<br>
 							<div class="row">
-								
 								<div class="col-xs-4">
 
 									<?php if ( has_post_thumbnail() ) {?> <a href="<?php the_permalink();?>" class="img-thumbnail"> <?php the_post_thumbnail('thumbnail');?> </a> <?php } ?>	
 								</div>
-
 								<div class="col-xs-8">
 
 									<h3 class="title"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
 									<div class="blog-info">
-											<span class="title">By:</span> <span class="info"><?php the_author(); ?></span>,
-											<!-- <span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>, -->
 											<span class="title">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
 									</div>
 									<?php the_excerpt(); ?>
-									&nbsp;
-									<div class="blog-continue_reading">
-										<a href="<?php the_permalink();?>" class="btn btn-primary cat_continue">Open Project</a>
-									</div>
+								</div>
+							</div>
+							<br>
+							<hr>
+							<br>
+							<div class="row home-content blog-list">
+								<div class="blog-continue_reading col-lg-4 col-md-4">
+									<a href="<?php the_permalink();?>" class="cat_continue"><i class="fa fa-share"></i> Continue Reading</a>
+								</div>
+								<div class="blog-info col-lg-8 col-md-8">
+									<span class="title"><i class="fa fa-reddit"></i></span>
+									<span class="title">Project by</span> <span class="info"><?php the_author(); ?></span>
 								</div>
 							</div>
 							<br>
 						</div>
 					</div>
-					<br>						
+					<br> -->						
 		    						 
 		    <?php  endwhile;}?>
-			   
+		    <div class="row"></div>
+		    </div>
 
 		</section>
 		<?php get_sidebar( 'right' ); ?>

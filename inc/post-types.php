@@ -18,7 +18,7 @@ function create_post_type() {
 			'public' => true,
 			'has_archive' => true,
 			'show_ui' => true,
-			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes', 'post-formats'),
+			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes', 'post-formats', 'comments', 'custom-fields'),
 		)
 	);
 }

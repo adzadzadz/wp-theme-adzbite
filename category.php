@@ -23,11 +23,9 @@
 				<div class="blog-bg">
 					<div class="home-content">
 						<br>
-						<br>
 						<?php get_template_part('content','post'); ?>
 					</div>
 				</div>
-				<br>
 				<?php endwhile; else: ?>
 
 				<h4>No content to display.</h4>

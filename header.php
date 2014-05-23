@@ -25,8 +25,11 @@ $options = get_option('theme_options');
 <div class="lightbox-popup"></div>
 <div class="notifbox"><div class="thebox"></div></div>
 <header class="col-lg-12 col-sm-12 col-xs-12">
-	<div class="brand col-lg-2 col-md-2 col-sm-3 col-xs-12">
-		<a href="<?= home_url(); ?>"><img src="<?= $options['theme_logo'] ?>" alt="<?= get_bloginfo( 'name' ) ?> Logo"></a> 
+	<div class="brand col-lg-2 col-md-2 col-sm-3 col-xs-12" style="padding-top:12px;">
+		<a href="<?= home_url(); ?>" style="font-size: 1.2em;">
+			<!-- <img src="<?= $options['theme_logo'] ?>" alt="<?= get_bloginfo( 'name' ) ?> Logo"> -->
+			<span style="color: #fff;">adzbite</span><span style="color: #31FF23;">Dotcom</span>
+		</a> 
 	</div>
 	<nav class="mini">
 
