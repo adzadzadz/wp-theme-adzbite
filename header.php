@@ -40,11 +40,8 @@ $options = get_option('theme_options');
 
 		</div>
 		<div class="social_icons_wrap col-lg-3 col-md-3 col-xs-12 wide-screen-menu">
-					<div class="social_icon float-right"><a target="_blank" href="http://www.adzbite.com/contact/"><img src="<?= get_template_directory_uri() ?>/assets/imgs/email_icon.png" alt="email icon"></a></div>
-					<div class="social_icon float-right"><a target="_blank" href="https://twitter.com/adzadzadz1"><img src="<?= get_template_directory_uri() ?>/assets/imgs/twitter_icon.png" alt="twitter icon"></a></div>
-					<div class="social_icon float-right"><a target="_blank" href="https://plus.google.com/113519576477327047668/"><img src="<?= get_template_directory_uri() ?>/assets/imgs/google_plus_icon.png" alt="google plus icon"></a></div>
-					<div class="social_icon float-right"><a target="_blank" href="https://www.facebook.com/adzsites"><img src="<?= get_template_directory_uri() ?>/assets/imgs/fb_icon.png" alt="facebook icon"></a></div>
-				</div>
+			
+		</div>
 		<div class="right-nav col-lg-2 col-md-2 col-sm-3 col-xs-12 wide-screen-menu">
 			<ul class="float-li-right">
 					
@@ -78,3 +75,7 @@ $options = get_option('theme_options');
 	</nav>
 </header>
 
+<!-- <div class="social_icon float-right"><a target="_blank" href="http://www.adzbite.com/contact/"><img src="<?= get_template_directory_uri() ?>/assets/imgs/email_icon.png" alt="email icon"></a></div>
+			<div class="social_icon float-right"><a target="_blank" href="https://twitter.com/adzadzadz1"><img src="<?= get_template_directory_uri() ?>/assets/imgs/twitter_icon.png" alt="twitter icon"></a></div>
+			<div class="social_icon float-right"><a target="_blank" href="https://plus.google.com/113519576477327047668/"><img src="<?= get_template_directory_uri() ?>/assets/imgs/google_plus_icon.png" alt="google plus icon"></a></div>
+			<div class="social_icon float-right"><a target="_blank" href="https://www.facebook.com/adzsites"><img src="<?= get_template_directory_uri() ?>/assets/imgs/fb_icon.png" alt="facebook icon"></a></div> -->

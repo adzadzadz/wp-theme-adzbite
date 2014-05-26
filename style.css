@@ -1082,6 +1082,9 @@ a.cat_continue {
 	}
 }
 @media screen and (max-width: 990px) {
+	.page_title_bg {
+		min-height: 125px;
+	}
 	aside.right .left-sidebar-widget {
 		float: left;
 		width: 380px;

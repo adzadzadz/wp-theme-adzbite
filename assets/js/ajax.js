@@ -61,7 +61,7 @@ $(document).ready(function() {
             url: ajax_object.ajax_url,
             type:'post',
             data: {
-                'action':'contact_message',
+                'action':'adzbite_register_form',
             },
             beforeSend: function(){
                 $(".thebox").html('<span class="glyphicon glyphicon-remove close-btn"></span><h2> Loading! </h2>');
