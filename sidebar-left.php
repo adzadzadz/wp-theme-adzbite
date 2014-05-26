@@ -8,7 +8,7 @@
 
 ?>
 
-
+<div class="row"> <!-- End is on Sidebar-right -->
 <aside class="left col-lg-2 col-md-2 col-sm-3">
 	<div class="left-wrap">
 		<div class="col-lg-12 tagline">

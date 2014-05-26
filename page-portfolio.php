@@ -38,8 +38,8 @@ $my_query = new WP_Query($args);
 		<section class="center-content col-lg-7 col-md-7 col-sm-9">
 
 			<div class="page_title_bg">
-				<div class="col-md-3 col-sm-12 page_title"><h2><?php the_title(); ?></h2></div>
-				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
+				<div class="col-md-3 col-sm-12 page_title"><h2>Projects</h2></div>
+				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"></div>
 			</div>
 			
 			<?php if(have_posts()): while(have_posts()) : the_post(); ?>
@@ -57,15 +57,17 @@ $my_query = new WP_Query($args);
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>
 						<?php if ( has_post_thumbnail() ) {?>
 							
-							<div class="cool-gallery-single col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="cool-gallery-single col-lg-4 col-md-6 col-sm-6 col-xs-6">
 								<div class="img-wrap">
 									<a href="<?php the_permalink();?>"><?php if ( has_post_thumbnail() ) {the_post_thumbnail( 'medium', $default_attr );} ?></a>
 								</div>
-								<div class="cool-gallery-text">
-									<div class="cool-gallery-content">
-										<h4><b><?php the_title();?></b></h4>
-										<hr>
-										<p><small><?php the_excerpt(); ?></small></p>
+								<div class="cool-gallery-text-wrap">
+									<div class="cool-gallery-text">
+										<div class="cool-gallery-content">
+											<h4><b><?php the_title();?></b></h4>
+											<hr>
+											<p><small><?php the_excerpt(); ?></small></p>
+										</div>
 									</div>
 								</div>
 							</div>

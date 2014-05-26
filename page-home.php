@@ -47,16 +47,13 @@ $options = get_option('theme_options');
 				<span class="glyphicon glyphicon-chevron-right"></span>
 				</a>
 			</div>
-			<div class="home-content">		
-				<br>
-				
+			<div class="">		
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
 				<?php the_content(); ?>
 				<?php endwhile; else: ?>
 				<h4>No content to display.</h4>
 				<?php endif ?>
-				<hr>
 			</div>
 		</div>
 	</section>

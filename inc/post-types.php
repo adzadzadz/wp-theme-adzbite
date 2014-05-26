@@ -14,6 +14,7 @@ function create_post_type() {
 				'add_new_item' => 'Add New Project',
 				'edit_item' => 'Edit Project',
 			),
+			'taxonomies' => array('category', 'post_tag'),
 	    	'rewrite' => array('slug' => 'latest-work'),
 			'public' => true,
 			'has_archive' => true,

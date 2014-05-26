@@ -18,3 +18,4 @@
 		<?php endif; ?>
 	</div>
 </aside>
+</div> <!-- div.row Starts on Sidebar-left -->

@@ -1,5 +1,87 @@
 <?php
 
+/** =============== google_ads =================*/
+
+add_shortcode('google_ad','google_ad');
+// Example:  [title value="Collection" sub="LoL"]
+function google_ad($atts, $content = null)
+{
+	$output = '<div class="row">';
+	$output .= '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
+	$output .= '<!-- Test Ad -->';
+	$output .= '<ins class="adsbygoogle"';
+	$output .= 'style="display:inline-block;width:728px;height:90px"';
+	$output .= 'data-ad-client="ca-pub-5190425886306439"';
+	$output .= 'data-ad-slot="9973745109"></ins>';
+	$output .= '<script>';
+	$output .= '(adsbygoogle = window.adsbygoogle || []).push({});';
+	$output .= '</script>';
+
+	return $output;
+}
+
+
+
+
+/** =============== row =================*/
+
+add_shortcode('row','row');
+// Example:  [title value="Collection" sub="LoL"]
+function row($atts, $content = null)
+{
+	$output = '<div class="row">';
+	$output .= do_shortcode($content);
+	$output .= '</div>';
+
+	return $output;
+}
+
+/** =============== side_margin =================*/
+
+add_shortcode('side_margin','side_margin');
+// Example:  [title value="Collection" sub="LoL"]
+function side_margin($atts, $content = null)
+{	
+	extract(shortcode_atts(array('margin' => '25px'),$atts));
+
+	$output = '<div style="margin: 0px ' . $margin . '">';
+	$output .= do_shortcode($content);
+	$output .= '</div>';
+
+	return $output;
+}
+
+
+/** =============== Cool Gallery Img =================*/
+
+add_shortcode('cool_gallery_img','gallery_img');
+// Example:  [cool_gallery_img link="" class="" src="" alt="" title="" desc="" ]
+function gallery_img($atts, $content = null)
+{
+	extract(shortcode_atts(array('col_lg' => '3', 'class' => '', 'link' => '', 'src' => '&nbsp;', 'alt' => '&nbsp', 'title' => 'title', 'desc' => 'desc' ),$atts));
+
+	$column = 12 / $col_lg;
+
+
+	$output = '';
+	$output .= '<div class="cool-gallery-single col-lg-' . $column . ' col-md-6 col-sm-6 col-xs-6 ' . $class . '">';
+	$output .= '<div class="img-wrap">';
+	$output .= '<a href="' . $link . '"><img src="' . $src . '" alt="' . $alt . '" /></a>';
+	$output .= '</div>';
+	$output .= '<div class="cool-gallery-text-wrap">';
+	$output .= '<div class="cool-gallery-text">';
+	$output .= '<div class="cool-gallery-content">';
+	$output .= '<h4><b>' . $title . '</b></h4>';
+	$output .= '<hr>';
+	$output .= '<p><small>'. $desc . '</small></p>';
+	$output .= '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+
+	return $output;
+}
+
 
 /** =============== Page Title =================*/
 
@@ -155,7 +237,7 @@ function infobox($atts, $content = null)
 	}
 
 	$output = '';
-	$output .= '<div class="col-xs-12 col-sm-' . $col_count . '">';
+	$output .= '<div class="col-xs-12 col-sm-' . $col_count . ' info-box-wrap">';
 	$output .= '<div class="info-box ' . $class . ' ' . $hover_class . '" style="background: ' . $bg . '; ' . $pre_height . 'height: ' . $height . ';">';
 	$output .= '<span class="glyphicon glyphicon-' . $logo . '" style="font-size: 3em;"></span>';
 	$output .= '<h2><b>' . $title . '</b></h2>';

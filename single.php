@@ -20,6 +20,7 @@
 				<div id="breadcrumb_bg" class="col-md-9 col-sm-12"><?php the_breadcrumb(); ?></div>
 			</div>
 			<div class="blog-bg">
+			
 				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
 				<?php get_template_part('content','post'); ?>
