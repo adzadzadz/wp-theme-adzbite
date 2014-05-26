@@ -27,8 +27,8 @@ $options = get_option('theme_options');
 <div class="notifbox"><div class="thebox"></div></div>
 <header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<nav class="mini">
-		<div class="brand col-lg-2 col-md-2 col-sm-3 col-xs-12" style="padding-top:12px;">
-			<a href="<?= home_url(); ?>" style="font-size: 1.2em;">
+		<div class="brand col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding-top:12px;">
+			<a href="<?= home_url(); ?>" style="font-size: 1.2em; text-decoration: none;">
 				<!-- <img src="<?= $options['theme_logo'] ?>" alt="<?= get_bloginfo( 'name' ) ?> Logo"> -->
 				<span style="color: #fff;">adzbite</span><span style="color: #31FF23;">Pictures</span>
 			</a> 

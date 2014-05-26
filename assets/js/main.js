@@ -187,7 +187,7 @@ $('.cool-gallery-single').mouseenter(function (idx, el) {
     $(this).find('.cool-gallery-text').css('z-index','50');
     $(this).find('.img-wrap').css('z-index','51');
     $(this).find('.cool-gallery-text').stop().animate({top: "-130px", opacity: "0", height: "20px"}, 200);
-    $(this).find('.img-wrap').stop().animate({opacity: "0.7", top: "0px"}, 300);
+    $(this).find('.img-wrap').stop().animate({opacity: "0.9", top: "0px"}, 300);
     $(this).find('.cool-gallery-content').stop().animate({marginTop: "-100px", opacity: "0"}, 500);
     
       // $(this).find('.cool-gallery-text').slideUp('slow');
