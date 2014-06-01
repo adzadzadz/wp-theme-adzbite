@@ -2,7 +2,9 @@
 
 	/**
 	 * 
-	 * Everything in the header goes here.
+	 * Everything on the homepage is here
+	 *
+	 * Template Name: Testing Template
 	 *
 	 */
 
@@ -25,6 +27,7 @@ $options = get_option('theme_options');
 <div id="fb-root"></div>
 <div class="lightbox-popup"></div>
 <div class="notifbox"><div class="thebox"></div></div>
+<div class="adz-newsletter"></div>
 <header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<nav class="mini">
 		<div class="brand col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding-top:12px;">
@@ -74,3 +77,22 @@ $options = get_option('theme_options');
 		</div>
 	</nav>
 </header>
+
+<div id="page-content">
+	<?php get_sidebar( 'left' ); ?>
+	<?php get_template_part( 'content', 'top' ); ?> 
+	<section class="center-content col-lg-7 col-md-7 col-sm-9">
+		<div class="work-bg">
+			<div class="">
+				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
+				<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
+				<?php the_content(); ?>
+				<?php endwhile; else: ?>
+				<h4>No content to display.</h4>
+				<?php endif ?>
+			</div>
+		</div>
+	</section>
+	<?php get_sidebar( 'right' ); ?>
+</div>
+<?php get_footer(); ?>

@@ -13,15 +13,15 @@
 	<?php if(!is_single()) : ?>
 		<div class="row article-summary-wrap">
 			<div class="row home-content blog-list">
-				<div class="blog-info col-md-12 col-lg-12 top">
+				<div class="blog-info col-lg-12 col-md-12 top">
 						<!-- <span class="title">By:</span> <span class="info"><?php the_author(); ?></span>, -->
 						<span class="title"><i class="fa fa-child"></i></span>
 						<span class="title">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>,
 						<span class="title">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 col-lg-12 home-content">
+			<div class="row home-content">
+				<div class="col-lg-12 col-md-12">
 					<h3 class="title"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
 				</div>
 			</div>
@@ -49,6 +49,10 @@
 		</div>
 	<?php else: ?>
 		<div class="blog-info-single">
+			<div class="row">
+				<div class="fb-like float-left top-social" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+				<div class="g-plusone" data-size="medium" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>"></div>
+			</div>
 			<h1 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 			<h4>Posted in <?php echo the_category(', ');?> on <?php the_date('F j, Y g:i a'); ?></h4>
 		</div>
@@ -60,13 +64,13 @@
 			<hr>
 			<p class="wp_tags"><small><i class="fa fa-tags"></i> <?php the_tags(); ?></small></p>
 			<hr>
-			<h3><b>About the Author</b></h3>
+			<h3><b>About me</b></h3>
 			<div class="author-info">
 				<!-- <h3><b>Written by:</b></h3> -->
 				<div class="media">
-					<a class="pull-left" href="#">
+					<span class="pull-left">
 						<?=  get_avatar( get_the_author_meta( 'ID' ), 100 ) ?>
-					</a>
+					</span>
 					<div class="media-body">
 					<h3 class="media-heading"><b><a href="<?php echo get_page_link(13);?>"> <?php the_author(); ?></a></b></h3>
 					<small><?php the_author_meta('description'); ?></small>

@@ -178,7 +178,7 @@ $('.cool-gallery-single').mouseenter(function (idx, el) {
   $(this).find('.cool-gallery-text').css('z-index','60');
   $(this).find('.img-wrap').css('z-index','61');
   $(this).find('.img-wrap').animate({top: "-100px", opacity: "1"}, 300);
-  $(this).find('.cool-gallery-text').animate({top: "0", opacity: "1", height: "170px"}, 300);
+  $(this).find('.cool-gallery-text').animate({top: "0", opacity: "1", 'min-height': "190px"}, 300);
   $(this).find('.cool-gallery-content').animate({marginTop: "0px", opacity: "1"}, 500);
 
   // $(this).find('.cool-gallery-text').slideToggle('slow');
@@ -225,11 +225,15 @@ $('.cool-gallery-single').mouseenter(function (idx, el) {
 }(document, 'script', 'facebook-jssdk'));
 
 
+/*===================================================================================
+  ================================ Google Follow ====================================
+  =================================================================================== */
 
-
-
-
-
+(function() {
+  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+  po.src = 'https://apis.google.com/js/platform.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
 
 
 

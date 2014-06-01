@@ -64,7 +64,7 @@ function gallery_img($atts, $content = null)
 
 
 	$output = '';
-	$output .= '<div class="cool-gallery-single col-lg-' . $column . ' col-md-6 col-sm-6 col-xs-6 ' . $class . '">';
+	$output .= '<div class="cool-gallery-single col-lg-' . $column . ' col-md-6 col-sm-6 col-xs-12 ' . $class . '">';
 	$output .= '<div class="img-wrap">';
 	$output .= '<a href="' . $link . '"><img src="' . $src . '" alt="' . $alt . '" /></a>';
 	$output .= '</div>';
@@ -89,11 +89,11 @@ add_shortcode('title','page_title');
 // Example:  [title value="Collection" sub="LoL"]
 function page_title($atts, $content = null)
 {
-	extract(shortcode_atts(array('class' => '', 'value' => '', 'sub' => '&nbsp;'),$atts));
+	extract(shortcode_atts(array('class' => '', 'value' => '&nbsp;', 'sub' => '&nbsp;'),$atts));
 
 	$output = '';
 	$output .= '<div class="page_title_bg2 row ' . $class . '">';
-	$output .= '<h2 style="color: #03381C;">';
+	$output .= '<h2 style="color: #fff;">';
 	$output .= '<div class="col-md-5 col-sm-12 page_title2"><b>' . $value . '</b></div>';
 	$output .= '<div class="col-md-7 col-sm-12 page_title_right2"><small>' . $sub . '</small></div>';
 	$output .= '</h2>';
@@ -140,11 +140,11 @@ add_shortcode('lightbox','lightbox');
 // Example: [lightbox cols="5" class="" img="" alt="" img_link="#" img_attr=""]
 function lightbox($atts, $content = null)
 {
-	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'cols' => 12),$atts));
+	extract(shortcode_atts(array('class' => '', 'img' => '', 'alt' => '', 'img_link' => '#', 'img_attr' => '', 'img_style' => '', 'cols' => 12, 'height' => ''),$atts));
 
 	$output = '';
 	$output .= '<div style="padding-left:0;" class="lb-pop col-md-' . $cols . '"><a class="thumbnail" style="margin-bottom: 0px;">';
-	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '" height="' . $height . '" width="' . $width . '"' . $img_attr . '>';
+	$output .= '<img class="' . $class . '" src="' . $img . '" data-link="' . $img_link . '" alt="' . $alt . '" height="' . $height . '" width="' . $width . '"' . $img_attr . ' style="' . $img_style . '">';
 	$output .= '</a></div>';
 
 	return $output;

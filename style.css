@@ -36,21 +36,21 @@ Custom styles can be added on assets/css/extra.css
  * General
  *
  */
+body {
+	background: #e2e2e2;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+	background-image:url('assets/imgs/adzbite-bg-img.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:top center;
+	background-size: 100% 100%;
+}
 html, body {
 	height: 100%;
 	/*font-family: 'Tauri', sans-serif;*/
 	color: #A1AB97;
 	/*background-image:url('assets/imgs/ZenBG-2.png');*/
-}
-body {
-	background: #e2e2e2;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-	background-image:url('assets/imgs/adzbite-bg-img.png');
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-	background-position:top center;
-	background-size: auto auto;
 }
 .container {
 	width: 100%;
@@ -161,13 +161,13 @@ a:hover {
  */
 
 .home-bg {
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.8);
 	color: #ccc;
     font-size: 1.2em;
 }
 .home-content {
-	padding: 0px 0px !important;
-	margin: 0 25px !important;
+	padding: 0px 25px !important;
+	/*margin: 0 25px !important;*/
 }
 
 /*
@@ -213,8 +213,7 @@ header .left-nav ul li a:hover {
 header .wide-screen-menu li ul.sub-menu {
 	display: none;
 	position: absolute;
-	bottom: -50px !important;
-	/*margin-top: 5px;*/
+	margin-bottom: -50px !important;
 }
 header .wide-screen-menu li ul.sub-menu li{
 	min-width: 100px;
@@ -706,7 +705,7 @@ footer.main .copyright-bottom {
 	background-image:url('assets/imgs/adzbite-bg-3.jpg');
 	background-repeat: repeat;
 	font-style: italic;
-	padding: 80px 25px 40px;
+	padding: 40px 25px 40px;
 	color: #9ba09c;
 	font-weight: bold;
 }
@@ -731,21 +730,11 @@ footer.main .copyright-bottom {
 }
 .author-info {
 	background: #ddd;
-	height: 150px;
+	min-height: 150px;
 	width: 100%;
 	padding: 20px 20px;
 	position: relative;
 	overflow: hidden;
-}
-.author-img {
-	float: left;
-	display: inline;
-}
-.author-img img {
-	border: 5px #777 solid;
-	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
 }
 .author-info a, .author-info a:hover, .author-info a:link, .author-info a:visited {
 	color: #444;
@@ -801,6 +790,9 @@ a.cat_continue {
 .post-social-plugin {
 	margin-bottom: 10px;
 }
+.top-fb-like {
+	padding-bottom: 25px;
+}
 
 /*
 *
@@ -837,7 +829,7 @@ a.cat_continue {
 	text-align: center;
 }
 .lightbox-popup img {
-	margin-top: 40px;
+	margin-top: 60px;
 	max-width: 90%;
 	max-height: 90%;
 	margin-right: auto;
@@ -891,6 +883,16 @@ a.cat_continue {
 	margin-top: 5px;
 	padding: 3px 7px;
 	font-size: .8em;
+}
+
+/*
+*
+* Newsletter
+*
+*/
+
+.adz-newsletter {
+
 }
 
 
@@ -1022,32 +1024,16 @@ a.cat_continue {
 	height: 100%;
 	border-bottom: 2px green solid;
 }
-.mosaic .block {
-	padding: 0px 0px 0px 0px;
-}
-.mosaic .wrap {
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-	margin: 0 5px 5px 0;
-}
-.mosaic img {
-	width: 100%;
-/*  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;*/
-}
-.mosaic img:hover {
-	/*width: 120%;*/
-}
+
 
 /*
 *
 * Social
 *
 */
+.top-social {
+	padding-right: 10px;
+}
 .social_icons_wrap {
 
 }
@@ -1138,7 +1124,8 @@ a.cat_continue {
 
 
 .work-bg {
-	background: #fff;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0.8);
 	padding: 0 0;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.75);

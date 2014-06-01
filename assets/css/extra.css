@@ -2,6 +2,7 @@
 	margin: 0 0 0 0 !important;
 	min-height: 40px;
 	padding-top: 12px;
+    text-align: center;
 }
 #breadcrumbs{
     list-style:none;

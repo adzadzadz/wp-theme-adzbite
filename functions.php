@@ -122,9 +122,10 @@ add_action( 'widgets_init', 'left_sidebar' );
 
 
 // EXCERPT STUFF
-function limit_string_lenght($string = "", $limit = NULL) {
- $limit = $limit - 1;
- $exerpt = substr($string, 0, $limit);
- $exerpt .= "...";
- return $exerpt;
+function string_limit_words($string, $word_limit)
+{
+  $words = explode(' ', $string, ($word_limit + 1));
+  if(count($words) > $word_limit)
+  array_pop($words);
+  return implode(' ', $words);
 }
