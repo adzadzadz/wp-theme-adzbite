@@ -652,6 +652,9 @@ footer.main .copyright-bottom {
 *
 */
 
+.next-post a {
+	color: #fff;
+}
 .blog-page, .blog-page .title {
 	color: #000;
 }
@@ -1124,6 +1127,9 @@ a.cat_continue {
 
 
 .work-bg {
+	color: #fff;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
 	margin-bottom: 10px;
 	background: rgba(0,0,0,0.8);
 	padding: 0 0;
@@ -1133,11 +1139,30 @@ a.cat_continue {
 }
 
 
-/*div, p, span, img, h1, h2, h3, h4, h5, h6, section, header, footer {
-	border: 2px red solid;
-}*/
+/*ADVERTISEMENTS*/
+.ads-right img, .ads-content img {
+	width: 100%;
+}
 
 
+
+.adz-newsletter {
+	display: table-cell;
+	z-index: 99;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	background: red;
+}
 
 
 img#wpstats{display:none}
+
+
+
+
+/*TROUBLESHOOTING*/
+/*div, p, span, img, h1, h2, h3, h4, h5, h6, section, header, footer {
+	border: 2px red solid;
+}

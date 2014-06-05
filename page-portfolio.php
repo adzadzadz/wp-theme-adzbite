@@ -27,6 +27,18 @@ $args=array(
 $my_query = null;
 $my_query = new WP_Query($args);
 
+// Work related articles
+$type2 = 'post';
+$args2 = array(
+  'post_type' => $type2,
+  'post_status' => 'publish',
+  'posts_per_page' => -1,
+  'caller_get_posts'=> 1,
+  'cat' => 35,
+);
+
+$my_query2 = null;
+$my_query2 = new WP_Query($args2);
 ?>
 
 
@@ -82,7 +94,58 @@ $my_query = new WP_Query($args);
 				    <?php }?>
 			    </div>
 		    </div>
-
+		    <br><br>
+		    <div class="page_title_bg">
+				<div class="col-md-4 col-sm-12 page_title"><h2>Related Articles</h2></div>
+				<!-- <div id="breadcrumb_bg" class="col-md-8 col-sm-12"></div> -->
+			</div>
+		    
+	    	<?php if( $my_query2->have_posts() ) {
+				while ($my_query2->have_posts()) : $my_query2->the_post(); ?>
+					<?php if ( has_post_thumbnail() ) {?>
+						<div class="work-bg">
+						<br>
+							<div class="row article-summary-wrap">
+								<div class="row home-content blog-list">
+									<div class="blog-info col-lg-12 col-md-12 top">
+											<!-- <span class="title">By:</span> <span class="info"><?php the_author(); ?></span>, -->
+											<span style="font-weight: bold; color: #fff;"><i class="fa fa-child"></i></span>
+											<span style="font-weight: bold; color: #fff;">Posted in:</span> <span class="info"><?php echo the_category(', ');?></span>,
+											<span style="font-weight: bold; color: #fff;">On:</span> <span class="info"><?php the_date('F j, Y g:i a'); ?></span>
+									</div>
+								</div>
+								<div class="row home-content">
+									<div class="col-lg-12 col-md-12">
+										<h3 style="font-weight: bold; color: #fff;"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></h3>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="text-align: center;">
+										<a href="<?= get_permalink(); ?>" class="post-thumb img-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></a>
+									</div>
+									<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+										<div class="excerpt">
+											<?php the_excerpt(); ?>
+										</div>
+									</div>
+								</div>
+								<hr>
+								<div class="row home-content blog-list">
+									<div class="blog-continue_reading col-lg-4 col-md-4">
+										<a href="<?php the_permalink();?>" class="cat_continue"><i class="fa fa-share"></i> Continue Reading</a>
+									</div>
+									<div class="blog-info col-lg-8 col-md-8">
+										<span style="font-weight: bold; color: #fff;"><i class="fa fa-reddit"></i></span>
+										<span style="font-weight: bold; color: #fff;">Article Posted by</span> <span class="info"><?php the_author(); ?></span>
+									</div>
+								</div>
+							</div>
+							<br>
+						</div><br>
+					<?php } ?>
+			    <?php  endwhile; ?> 
+		    <?php }?>
 		</section>
 		<?php get_sidebar( 'right' ); ?>
 	</div>

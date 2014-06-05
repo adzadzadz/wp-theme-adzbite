@@ -53,14 +53,18 @@
 				<div class="fb-like float-left top-social" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 				<div class="g-plusone" data-size="medium" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>"></div>
 			</div>
-			<h1 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
+			<h1 class="title"><?php the_title();?></h1>
 			<h4>Posted in <?php echo the_category(', ');?> on <?php the_date('F j, Y g:i a'); ?></h4>
 		</div>
 		<div class="horizontal-wall"></div>
 		<div class="blog-content">
 			<?php the_content();?>
-			<br />
-			
+			<?php previous_post_link('<button class="next-post col-lg-12 btn btn-lg btn-danger">%link</button>', 'Click here for the previous article', TRUE); ?>
+			<?php next_post_link('<button class="next-post col-lg-12 btn btn-lg btn-success">%link</button>', 'Click here for the next article', TRUE); ?>
+			<br><br>
+			<div class="ads-content">
+				<a href="http://29f343pqfauc6t1ktxqywhgbin.hop.clickbank.net/?tid=PADI-SOCIAL" target="_blank"><img src="<?= get_template_directory_uri() ?>/assets/imgs/ads/socialmediajobs-wide.jpg" alt="social media jobs"></a>
+			</div><br>
 			<hr>
 			<p class="wp_tags"><small><i class="fa fa-tags"></i> <?php the_tags(); ?></small></p>
 			<hr>

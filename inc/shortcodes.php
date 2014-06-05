@@ -1,5 +1,20 @@
 <?php
 
+/** =============== clickbank ads =================*/
+
+add_shortcode('clickbank_ad','clickbank_ad');
+// Example:  [title value="Collection" sub="LoL"]
+function clickbank_ad($atts, $content = null)
+{
+	$output = '';
+	$output .= '<div class="ads-content">';
+	$output .= '<a href="http://29f343pqfauc6t1ktxqywhgbin.hop.clickbank.net/?tid=PADI-SOCIAL" target="_blank"><img src="<?= get_template_directory_uri() ?>/assets/imgs/ads/socialmediajobs-wide.jpg" alt="social media jobs"></a>';
+	$output .= '</div><br>';
+
+	return $output;
+}
+
+
 /** =============== google_ads =================*/
 
 add_shortcode('google_ad','google_ad');

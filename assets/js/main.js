@@ -30,10 +30,10 @@ $('.wrap-thumbnail').mouseleave(function () {
   
   $('header li').hover(function () {
     if ($(this).find('ul.sub-menu') != undefined) {
-      $(this).find('ul.sub-menu').show();
+      $(this).find('ul.sub-menu').stop().show();
     }
     $(this).mouseleave(function () {
-      $(this).find('ul.sub-menu').hide();
+      $(this).find('ul.sub-menu').stop().hide();
     })
   });
 
