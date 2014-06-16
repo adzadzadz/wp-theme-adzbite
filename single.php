@@ -36,4 +36,29 @@
 		<?php get_sidebar( 'right' ); ?>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function () {
+
+		title = "Like and Share";
+		message = '<div class="row"><div class="fb-like float-left top-social" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>        <div class="g-plusone" data-size="medium" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>"></div></div>';
+		$('.thebox').html('<span class="glyphicon glyphicon-remove close-btn"></span><h2>' + title + '</h2><hr>' + message + '');
+
+		setTimeout(function(){showNotifmodal();},15000);
+
+		function showNotifmodal(title, message) {
+      
+		    if ($('.notifbox').length > 0) { // #notifbox exists
+		                   //place href as img src value
+		        
+		        //show notifbox window - you could use .show('fast') for a transition
+		        $('.notifbox').show();
+		        $('.thebox').slideDown();
+		    }
+		}
+	});
+</script>
+
 <?php get_footer(); ?>
+
+

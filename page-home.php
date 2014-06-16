@@ -12,12 +12,12 @@ $options = get_option('theme_options');
 ?>
 
 <?php 
-// Latest Posts
+// Latest Posts - start
 $type = 'post';
 $args = array(
   'post_type' => $type,
   'post_status' => 'publish',
-  'posts_per_page' => -1,
+  'posts_per_page' => 8,
   'caller_get_posts'=> 1,
   'cat' => -35,
 );
@@ -52,14 +52,14 @@ $my_query2 = new WP_Query($args2);
 				<div class="page_title_bg2 row">
 					<h2 style="color: #fff;">
 					<div class="col-md-5 col-sm-12 page_title2"><b>Latest Articles</b></div>
-					<div class="col-md-7 col-sm-12 page_title_right2"><small>Still working on this one</small></div>
+					<div class="col-md-7 col-sm-12 page_title_right2"><small>&nbsp;</small></div>
 					</h2>
 				</div><br>
 				<?php if( $my_query->have_posts() ) {
 					while ($my_query->have_posts()) : $my_query->the_post(); ?>
 						<?php if ( has_post_thumbnail() ) {?>
 
-							<div class="cool-gallery-single col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<div class="cool-gallery-single col-lg-3 col-md-3 col-sm-4 col-xs-6">
 								<div class="img-wrap">
 									<a href="<?php the_permalink();?>"><?php if ( has_post_thumbnail() ) {the_post_thumbnail( 'thumbnail', $default_attr );} ?></a>
 								</div>
@@ -90,7 +90,7 @@ $my_query2 = new WP_Query($args2);
 				<div class="page_title_bg2 row">
 					<h2 style="color: #fff;">
 					<div class="col-md-5 col-sm-12 page_title2"><b>Codes Stuff</b></div>
-					<div class="col-md-7 col-sm-12 page_title_right2"><small>And this one :)</small></div>
+					<div class="col-md-7 col-sm-12 page_title_right2"><small>&nbsp;</small></div>
 					</h2>
 				</div><br>
 				<?php if( $my_query2->have_posts() ) {

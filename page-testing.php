@@ -27,11 +27,6 @@ $options = get_option('theme_options');
 <div id="fb-root"></div>
 <div class="lightbox-popup"></div>
 <div class="notifbox"><div class="thebox"></div></div>
-<div class="adz-newsletter">
-	<div class="subscribe-form">
-		<label for="">the form</label><input type="text">
-	</div>
-</div>
 <header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<nav class="mini">
 		<div class="brand col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding-top:12px;">

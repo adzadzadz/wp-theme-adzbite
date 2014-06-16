@@ -49,7 +49,7 @@ $options = get_option('theme_options');
 					<li style="background:#AB0C16;"><a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 					<?php }
 					else{ ?>
-					<li style="background:#30302F;"><a id="btn-register" href="#"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Register</a></li>
+					<li style="background:#30302F;"><a id="btn-register" href="#"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Subscribe</a></li>
 					<li style="background:#30302F;"><a id="btn-login" href="#" title="Login"><span class="glyphicon glyphicon-user"></span>&nbsp;Login</a></li>
 					<?php } ?>
 				
@@ -67,7 +67,7 @@ $options = get_option('theme_options');
 					<li><a href="<?= wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 					<?php }
 					else{ ?>
-					<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Register</a></li>
+					<li><a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=register">Subscribe</a></li>
 					<li><a id="btn-login" href="<?= wp_login_url(); ?>" title="Login">Login</a></li>
 				<?php } ?>
 			</ul>

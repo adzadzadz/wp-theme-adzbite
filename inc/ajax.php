@@ -44,7 +44,7 @@ function adzbite_register_form() {
 	$output .= '</div>';
 	$output .= '<div class="login_fields">';
 	$output .= do_action('register_form');
-	$output .= '<div class="alert alert-danger">*Registering will give you access to cool stuffs in the future.<br>*Your password will be emailed to you.<br>*</div>';
+	$output .= '<div class="alert alert-danger">* Subscribing will give you access to cool stuffs in the future.</div>';
 	$output .= '<input type="submit" name="user-submit" value="Sign up" class="btn btn-primary" tabindex="103" />';
 	$output .= '<input type="hidden" name="redirect_to" value="' . $_SERVER['HTTP_REFERER'] . '?register=true" />';
 	$output .= '<input type="hidden" name="user-cookie" value="1" />';

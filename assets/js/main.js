@@ -5,6 +5,7 @@ $(document).ready(function() {
 // =================================================
 // ================== PAGE EVENTS ==================
 // =================================================
+
 $('.top-content .goto').click(function () {
   var title = "You just clicked on something!";
   var message = "Sorry, I am still working on the pages. The button you clicked will make sense soon. :)";
@@ -93,14 +94,14 @@ $('.wrap-thumbnail').mouseleave(function () {
 // ============== Top Carousel MODE ================
 // =================================================
   $('.top-img').hover(function () {
-      $(this).find('div.text').fadeIn('fast');
-      $(this).find('div.view').slideDown('fast');
-      $(this).find('div.goto').fadeIn('slow');
+      $(this).find('div.text').stop().fadeIn('fast');
+      $(this).find('div.view').stop().slideDown('fast');
+      $(this).find('div.goto').stop().fadeIn('slow');
   });
   $('.top-img').mouseleave(function () {
-      $(this).find('div.text').fadeOut();
-      $(this).find('div.view').slideUp();
-      $(this).find('div.goto').fadeOut();
+      $(this).find('div.text').stop().fadeOut();
+      $(this).find('div.view').stop().slideUp();
+      $(this).find('div.goto').stop().fadeOut();
   });
 
   $('.top-img .view').click(function(e) {
@@ -148,10 +149,10 @@ $('.wrap-thumbnail').mouseleave(function () {
       
     if ($('.notifbox').length > 0) { // #notifbox exists
                    //place href as img src value
-        $('.thebox').html('<span class="glyphicon glyphicon-remove close-btn"></span><h2>' + title + '</h2><hr><p>' + message + '</p>');
+        $('.notifbox .thebox').html('<span class="glyphicon glyphicon-remove close-btn"></span><h2>' + title + '</h2><hr><p>' + message + '</p>');
         //show notifbox window - you could use .show('fast') for a transition
         $('.notifbox').show();
-        $('.thebox').slideDown();
+        $('.notifbox .thebox').slideDown();
     }
   }
  
